@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using BaseClass;
-using DataLoad;
 using PlayFab;
 using PlayFab.ClientModels;
-using UnityEngine.Tilemaps;
 
 public class GameMgr
 {

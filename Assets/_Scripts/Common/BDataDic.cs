@@ -20,7 +20,6 @@ public class BDataDic<T>
 
     public Dictionary<string, T> JsonToDic(string Json)
     {
-        Debug.Log("여긴들어옴");
         var DataList = JsonUtility.FromJson<LoadDataList>(Json);
         
         if (DataList == null) // 만약 없다면 빈것그대로 보내줌

@@ -31,4 +31,11 @@ namespace BaseClass
         public int level;
         public int sp;
     }
+
+    [Serializable]
+    public class MapInfo
+    {
+        public string mapID;
+        public string mapName;
+    }
 }
