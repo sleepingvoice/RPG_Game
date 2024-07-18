@@ -5,18 +5,6 @@ using PlayFab.ClientModels;
 
 namespace DataLoad
 {
-    public class MonsterClass
-    {
-        public string id;
-        public MonsterInfo info;
-    }
-
-    public class PlayerClass
-    {
-        public string id;
-        public MonsterInfo info;
-    }
-
 
     public class BdataLoad : MonoBehaviour
     {

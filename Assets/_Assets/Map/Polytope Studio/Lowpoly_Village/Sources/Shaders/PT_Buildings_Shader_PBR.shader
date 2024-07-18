@@ -361,7 +361,6 @@ Shader "Polytope Studio/ PT_Medieval Buildings Shader PBR"
 		}
 	}
 	Fallback "Diffuse"
-	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
 Version=19105
