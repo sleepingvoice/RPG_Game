@@ -39,4 +39,18 @@ namespace BaseClass
         public string mapID;
         public string mapName;
     }
+
+    [Serializable]
+    public class PathInfo
+    {
+        public string ModelName;
+        public string FileNames;
+    }
+
+    [Serializable]
+    public class PathListClass
+    {
+        public List<PathInfo> PathList;
+    }
+
 }
