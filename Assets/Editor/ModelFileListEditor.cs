@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ModelFileListEditor : EditorWindow
 {
-    private const string folderPath = "Assets/_Resource"; // 파일을 검색할 폴더 경로
+    private const string folderPath = "Assets/_Resource/Monster/Model"; // 파일을 검색할 폴더 경로
     private const string saveFilePath = "/JsonData/ModelPath.json";
     private static readonly Regex fileNamePattern = new Regex(@"^\d+[A-Za-z]*_[A-Za-z]+$");
 

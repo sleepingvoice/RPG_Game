@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using System;
 
 public class GameMgr
 {
@@ -21,9 +22,11 @@ public class GameMgr
     private Dictionary<string, string> titleData = new Dictionary<string, string>();
     public Dictionary<string, string> TitleData { get { return TitleData; } }
 
+    public event Action InitGameEvent;
+
     public void initGame()
     {
-
+        InitGameEvent?.Invoke();
     }
 
     public void LoadTitleData()
@@ -43,5 +46,7 @@ public class GameMgr
             Debug.Log(error.GenerateErrorReport());
         });
     }
+
+
 
 }
