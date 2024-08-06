@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BDataDic<T>
+public class BdataDic<T>
 {
     [Serializable]
     public class LoadDataClass

@@ -106,7 +106,7 @@ NavMeshSettings:
     serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 2
+    agentHeight: 0.5
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
@@ -224,6 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 200789845}
+  - component: {fileID: 200789846}
   m_Layer: 0
   m_Name: Obj
   m_TagString: Untagged
@@ -240,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 200789844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -252,6 +253,37 @@ Transform:
   - {fileID: 642667509}
   m_Father: {fileID: 871393605}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200789846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200789844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 1
+  m_Size: {x: 303.5208, y: 30, z: 297.20688}
+  m_Center: {x: 146.7604, y: 167.25, z: 250.81511}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.05
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: af61441a5db0dc94688e5b9e39942210, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &294795044
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,8 +641,8 @@ GameObject:
   m_Name: Sea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &642667506
 MeshCollider:
@@ -946,6 +978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1972450619528280241, guid: 62f6191494f161340b448c5f6a7f56d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1972450619528280243, guid: 62f6191494f161340b448c5f6a7f56d8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1240,13 +1276,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 200789845}
     m_Modifications:
+    - target: {fileID: 4906118898832432176, guid: b1aad125634a32a43920ac986c185422, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4906118898832432177, guid: b1aad125634a32a43920ac986c185422, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d55b08511377b684395dab1b9fba6a16, type: 2}
+    - target: {fileID: 4906118898832432178, guid: b1aad125634a32a43920ac986c185422, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4906118899592192681, guid: b1aad125634a32a43920ac986c185422, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906118899592192681, guid: b1aad125634a32a43920ac986c185422, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0483
       objectReference: {fileID: 0}
     - target: {fileID: 4906118899592192681, guid: b1aad125634a32a43920ac986c185422, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1254,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906118899592192681, guid: b1aad125634a32a43920ac986c185422, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 152.80281
+      value: 152.58
       objectReference: {fileID: 0}
     - target: {fileID: 4906118899592192681, guid: b1aad125634a32a43920ac986c185422, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1292,10 +1340,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PT_Wooden_Bridge_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4906118900432455026, guid: b1aad125634a32a43920ac986c185422, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4906118900432455027, guid: b1aad125634a32a43920ac986c185422, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d55b08511377b684395dab1b9fba6a16, type: 2}
+    - target: {fileID: 4906118900432455028, guid: b1aad125634a32a43920ac986c185422, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1405,10 +1461,6 @@ PrefabInstance:
     - target: {fileID: 1972450619528280241, guid: 62f6191494f161340b448c5f6a7f56d8, type: 3}
       propertyPath: m_Name
       value: PT_Fruit_Tree_01_green
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972450619528280243, guid: 62f6191494f161340b448c5f6a7f56d8, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1972450619528280243, guid: 62f6191494f161340b448c5f6a7f56d8, type: 3}
       propertyPath: m_LocalPosition.x

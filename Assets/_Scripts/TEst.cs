@@ -131,7 +131,7 @@ public class TEst : MonoBehaviour
 
     #region Player Fab TitleData불러오기
 
-    BDataDic<MonsterInfo> TestDic = new BDataDic<MonsterInfo>();
+    BdataDic<MonsterInfo> TestDic = new BdataDic<MonsterInfo>();
     //데이터 불러오기 (로그인을 해야 불러올수 있음)
     public void ClientGetTitleData()
     {

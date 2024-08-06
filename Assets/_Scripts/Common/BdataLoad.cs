@@ -8,7 +8,7 @@ namespace DataLoad
 
     public class BdataLoad : MonoBehaviour
     {
-        BDataDic<MonsterInfo> Monsterdic;
+        BdataDic<MonsterInfo> Monsterdic;
 
         public void LoadData(GetTitleDataResult result, ref Dictionary<string, MonsterInfo> MonsterDic,ref Dictionary<string, PlayerInfo> PlayerDic)
         {

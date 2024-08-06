@@ -22,6 +22,13 @@ namespace BaseClass
         public CharInfo monsterChar;
         public int attackSpeed;
         public int moveSpeed;
+        public bool firstAttack; // ¼±°ø
+    }
+
+    public class MonsterState
+    {
+        public MS_Move moveState = MS_Move.normal;
+        public MS_Attak attackState = MS_Attak.normal;
     }
 
     [Serializable]

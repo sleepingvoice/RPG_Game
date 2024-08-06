@@ -8,6 +8,7 @@ public class MonsterBase : MonoBehaviour
     [SerializeField] private MonsterInfo info;
     [SerializeField] private GameObject modelObj;
 
+    private MonsterState ms_State = new MonsterState();
     private Rigidbody rigid;
     private Collider col;
 
@@ -25,5 +26,10 @@ public class MonsterBase : MonoBehaviour
         spawnID = SPMonsterID;
         info = Info;
         Instantiate(ModelPrefab, modelObj.transform);
+    }
+
+    public void MoveArround(int WaitTime)
+    {
+
     }
 }

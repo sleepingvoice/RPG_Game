@@ -22,7 +22,7 @@ public class MonsterMgr : MonoBehaviour
 
     public void LoadDic()
     {
-        BDataDic<MonsterInfo> TestDic = new BDataDic<MonsterInfo>();
+        BdataDic<MonsterInfo> TestDic = new BdataDic<MonsterInfo>();
         monsterDic = TestDic.JsonToDic(GameMgr.Instance.TitleData["Monster"]);
     }
 
