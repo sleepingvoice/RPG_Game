@@ -18,8 +18,9 @@ namespace BaseClass
     [Serializable]
     public class MonsterInfo
     {
-        public string monstID;
+        public string monsterID;
         public CharInfo monsterChar;
+        public string monsterMap;
         public int attackSpeed;
         public int moveSpeed;
         public bool firstAttack; // ¼±°ø
