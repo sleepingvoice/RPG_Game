@@ -42,7 +42,7 @@ public class TEst : MonoBehaviour
         Test1.id = "0001";
         MonsterInfo TestInfo1 = new MonsterInfo();
         TestInfo1.attackSpeed = 1;
-        TestInfo1.monstID = "0001";
+        TestInfo1.monsterID = "0001";
         TestInfo1.moveSpeed = 10;
         CharInfo Testchar1 = new CharInfo();
         Testchar1.hp = 100;
@@ -57,7 +57,7 @@ public class TEst : MonoBehaviour
         Test2.id = "0002";
         MonsterInfo TestInfo2 = new MonsterInfo();
         TestInfo2.attackSpeed = 2;
-        TestInfo2.monstID = "0002";
+        TestInfo2.monsterID = "0002";
         TestInfo2.moveSpeed = 5;
         CharInfo Testchar2 = new CharInfo();
         Testchar2.hp = 50;
@@ -72,7 +72,7 @@ public class TEst : MonoBehaviour
         Test3.id = "0003";
         MonsterInfo TestInfo3 = new MonsterInfo();
         TestInfo3.attackSpeed = 1;
-        TestInfo3.monstID = "0003";
+        TestInfo3.monsterID = "0003";
         TestInfo3.moveSpeed = 20;
         CharInfo Testchar3 = new CharInfo();
         Testchar3.hp = 200;

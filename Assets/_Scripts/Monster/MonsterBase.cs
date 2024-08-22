@@ -59,8 +59,6 @@ public class MonsterBase : MonoBehaviour
         nowStateCo = null;
     }
 
-
-
     IEnumerator MoveArround(Vector3 TargetPos)
     {
         while (Vector3.Distance(transform.position, TargetPos) > 0.1f)
