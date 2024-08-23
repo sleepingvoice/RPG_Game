@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 
 namespace BaseClass
 {
@@ -20,7 +18,6 @@ namespace BaseClass
     {
         public string monsterID;
         public CharInfo monsterChar;
-        public string monsterMap;
         public int attackSpeed;
         public int moveSpeed;
         public bool firstAttack; // ¼±°ø

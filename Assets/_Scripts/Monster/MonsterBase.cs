@@ -10,10 +10,19 @@ using static UnityEngine.GraphicsBuffer;
 //몬스터 기본 기능
 public class MonsterBase : MonoBehaviour
 {
+    [Tooltip("고유 ID")]
     [SerializeField] private string spawnID;
+
+    [Tooltip("몬스터 정보")]
     [SerializeField] private MonsterInfo info;
+
+    [Tooltip("몬스터 모델의 부모 객체")]
     [SerializeField] private GameObject modelObj;
+
+    [Tooltip("몬스터가 대기하는 시간")]
     [SerializeField] private float WaitTime;
+
+    [Tooltip("몬스터가 소환될 맵의 콜라이더")]
     [SerializeField] private BoxCollider TargetMap;
 
     private Vector3 moveTargetPos;

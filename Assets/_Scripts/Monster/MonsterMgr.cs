@@ -7,9 +7,6 @@ using UnityEngine;
 //몬스터 매니저
 public class MonsterMgr : MonoBehaviour
 {
-    public MonsterBase monsterBase;
-
-
     private Dictionary<string, MonsterInfo> monsterDic;
 
     [SerializeField] private List<string> ModelName;
@@ -17,13 +14,15 @@ public class MonsterMgr : MonoBehaviour
 
     private void Start()
     {
-        GameMgr.Instance.InitGameEvent += LoadDic;
+        GameMgr.Instance.InitGameEvent += LoadMonsterDic;
     }
 
-    public void LoadDic()
+    public void LoadMonsterDic()
     {
         BdataDic<MonsterInfo> TestDic = new BdataDic<MonsterInfo>();
         monsterDic = TestDic.JsonToDic(GameMgr.Instance.TitleData["Monster"]);
+
+        Debug.Log("몬스터 정보 불러오기 완료");
     }
 
     #region 몬스터 모델 로드
