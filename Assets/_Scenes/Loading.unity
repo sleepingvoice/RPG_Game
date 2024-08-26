@@ -258,8 +258,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uB85C\uB529\uCC3D \uC124\uBA85\uB0B4\uC6A9"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 479a4a322328dd747b23c0e44143724e, type: 2}
-  m_sharedMaterial: {fileID: -4045464005276255549, guid: 479a4a322328dd747b23c0e44143724e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 417ad86981d2c85479fe680a2839ffde, type: 2}
+  m_sharedMaterial: {fileID: -4550165145768048789, guid: 417ad86981d2c85479fe680a2839ffde, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

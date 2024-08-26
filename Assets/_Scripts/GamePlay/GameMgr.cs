@@ -4,17 +4,13 @@ using PlayFab;
 using PlayFab.ClientModels;
 using System;
 
-public class GameMgr
+public class GameMgr : MonoBehaviour
 {
     private static GameMgr instance = null;
     public static GameMgr Instance
     {
         get
         {
-            if (null == instance)
-            {
-                instance = new GameMgr();
-            }
             return instance;
         }
     }
@@ -23,6 +19,19 @@ public class GameMgr
     public Dictionary<string, string> TitleData { get { return TitleData; } }
 
     public event Action InitGameEvent;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     public void initGame()
     {
