@@ -27,5 +27,11 @@ public class SpawnMgr : MonoBehaviour
     #endregion
 
     [SerializeField] private MonsterPool poolObj;
+
+    [SerializeField] private SO_Monster monsterData;
+    [SerializeField] private SO_SpawnMap spawnInfo;
+
     [HideInInspector] public MapInfo Info;
+
+
 }

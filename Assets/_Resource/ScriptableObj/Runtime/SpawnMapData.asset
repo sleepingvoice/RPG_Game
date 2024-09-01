@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140149c4dec72ce46a797d0a5b5e7a5c, type: 3}
   m_Name: SpawnMapData
   m_EditorClassIdentifier: 
-  monsterDicDisplay: []
+  SpawnDicDisplay: []

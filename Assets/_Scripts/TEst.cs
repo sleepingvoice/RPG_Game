@@ -48,7 +48,7 @@ public class TEst : MonoBehaviour
         Testchar1.hp = 100;
         Testchar1.atk = 10;
         Testchar1.def = 10;
-        Testchar1.modelPath = "대충경로";
+        Testchar1.modelName = "대충경로";
         TestInfo1.monsterChar = Testchar1;
         Test1.info = TestInfo1;
         test.List.Add(Test1);
@@ -63,7 +63,7 @@ public class TEst : MonoBehaviour
         Testchar2.hp = 50;
         Testchar2.atk = 5;
         Testchar2.def = 5;
-        Testchar2.modelPath = "대충경로";
+        Testchar2.modelName = "대충경로";
         TestInfo2.monsterChar = Testchar2;
         Test2.info = TestInfo2;
         test.List.Add(Test2);
@@ -78,7 +78,7 @@ public class TEst : MonoBehaviour
         Testchar3.hp = 200;
         Testchar3.atk = 20;
         Testchar3.def = 20;
-        Testchar3.modelPath = "대충경로";
+        Testchar3.modelName = "대충경로";
         TestInfo3.monsterChar = Testchar3;
         Test3.info = TestInfo3;
         test.List.Add(Test3);

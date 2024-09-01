@@ -11,7 +11,7 @@ namespace BaseClass
         public int hp;
         public int atk;
         public int def;
-        public string modelPath;
+        public string modelName;
     }
 
     [Serializable]
@@ -61,14 +61,15 @@ namespace BaseClass
     [Serializable]
     public class SpawnInfo
     {
-        public string SpawnId;
+        public string SpawnID;
+        public string SpawnModelID;
         public Vector3 SpawnPos;
     }
 
     [Serializable]
     public class MapInfo
     {
-        public string mapName;
-        public List<SpawnInfo> SpawnList;
+        public string MapName;
+        public List<SpawnInfo> SpawnList = new List<SpawnInfo>();
     }
 }
