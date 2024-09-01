@@ -3,9 +3,12 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using System;
+using BaseClass;
 
 public class GameMgr : MonoBehaviour
 {
+    #region 싱글톤
+
     private static GameMgr instance = null;
     public static GameMgr Instance
     {
@@ -15,10 +18,15 @@ public class GameMgr : MonoBehaviour
         }
     }
 
-    private Dictionary<string, string> titleData = new Dictionary<string, string>();
-    public Dictionary<string, string> TitleData { get { return TitleData; } }
+    #endregion
 
-    public event Action InitGameEvent;
+    [SerializeField]private GameProgress GameProgressValue = GameProgress.Title;
+
+    public BeventHandler LoginEvent = new BeventHandler();
+    public BeventHandler LoadDataEvent = new BeventHandler();
+    public BeventHandler LodingEvent = new BeventHandler();
+
+    public SceneMgr SecneMgr;
 
     private void Awake()
     {
@@ -33,29 +41,37 @@ public class GameMgr : MonoBehaviour
         }
     }
 
-    public void initGame()
+    private void Start()
     {
-        InitGameEvent?.Invoke();
+        LoginEvent.CompletedEvent += () => BLog.ProgressLog("Login 이벤트 종료");
+        LoginEvent.CompletedEvent += LoadData;
+
+        LoadDataEvent.CompletedEvent += () => BLog.ProgressLog("Login 이벤트 종료");
+        LoadDataEvent.CompletedEvent += Loading;
+
+
+        LodingEvent.CompletedEvent += () => BLog.ProgressLog("Login 이벤트 종료");
     }
 
-    public void LoadTitleData()
+    public void Login()
     {
-        
-        PlayFabClientAPI.GetTitleData(new GetTitleDataRequest(),
-        result =>
-        {
-            if (result.Data == null)
-                Debug.Log("No TitleData");
-            else
-                titleData = result.Data;
-        },
-        error =>
-        {
-            Debug.Log("Got error getting titleData:");
-            Debug.Log(error.GenerateErrorReport());
-        });
+        BLog.ProgressLog("Login 이벤트 실행");
+        GameProgressValue = GameProgress.Login;
+        LoginEvent.InvokeEvent();
     }
 
+    public void LoadData()
+    {
+        BLog.ProgressLog("LoadData 이벤트 실행");
+        GameProgressValue = GameProgress.LoadData;
+        LoadDataEvent.InvokeEvent();
+    }
 
+    public void Loading()
+    {
+        BLog.ProgressLog("LodingEvent 이벤트 실행");
+        GameProgressValue = GameProgress.Loding;
+        LodingEvent.InvokeEvent();
+    }
 
 }

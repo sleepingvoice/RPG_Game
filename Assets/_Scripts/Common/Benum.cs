@@ -1,6 +1,11 @@
 
 namespace BaseClass
 {
+    public enum GameProgress
+    {
+        Title,Login,LoadData,Loding,Game,Option
+    }
+
     public enum MS_Move
     {
         normal, walk, run

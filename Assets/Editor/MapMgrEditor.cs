@@ -1,8 +1,8 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(MonsterMgr))]
-public class MonsterMgrEditor : Editor
+[CustomEditor(typeof(MapMgr))]
+public class MapMgrEditor : Editor
 {
     public override void OnInspectorGUI()
     {
@@ -10,13 +10,13 @@ public class MonsterMgrEditor : Editor
         DrawDefaultInspector();
 
         // MonsterMgr 타겟
-        MonsterMgr MonsterMgr = (MonsterMgr)target;
+        MapMgr MapMgr = (MapMgr)target;
 
         // 버튼 추가
-        if (GUILayout.Button("Load Monster Models"))
+        if (GUILayout.Button("Load Map List"))
         {
             // LoadMonsterModelPath 함수 호출
-            MonsterMgr.LoadMonsterModelPath();
+            MapMgr.LoadMapName();
         }
     }
 }

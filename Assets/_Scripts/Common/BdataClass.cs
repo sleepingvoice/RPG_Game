@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace BaseClass
 {
@@ -39,13 +40,6 @@ namespace BaseClass
     }
 
     [Serializable]
-    public class MapInfo
-    {
-        public string mapID;
-        public string mapName;
-    }
-
-    [Serializable]
     public class PathInfo
     {
         public string ModelName;
@@ -58,4 +52,23 @@ namespace BaseClass
         public List<PathInfo> PathList;
     }
 
+    [Serializable]
+    public class SceneNameList
+    {
+        public List<string> NameList = new List<string>();
+    }
+
+    [Serializable]
+    public class SpawnInfo
+    {
+        public string SpawnId;
+        public Vector3 SpawnPos;
+    }
+
+    [Serializable]
+    public class MapInfo
+    {
+        public string mapName;
+        public List<SpawnInfo> SpawnList;
+    }
 }

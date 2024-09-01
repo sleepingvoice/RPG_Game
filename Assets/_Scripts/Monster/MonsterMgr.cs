@@ -12,19 +12,6 @@ public class MonsterMgr : MonoBehaviour
     [SerializeField] private List<string> ModelName;
     [SerializeField] private List<GameObject> MonsterModel;
 
-    private void Start()
-    {
-        GameMgr.Instance.InitGameEvent += LoadMonsterDic;
-    }
-
-    public void LoadMonsterDic()
-    {
-        BdataDic<MonsterInfo> TestDic = new BdataDic<MonsterInfo>();
-        monsterDic = TestDic.JsonToDic(GameMgr.Instance.TitleData["Monster"]);
-
-        Debug.Log("몬스터 정보 불러오기 완료");
-    }
-
     #region 몬스터 모델 로드
 
     public void LoadMonsterModelPath()

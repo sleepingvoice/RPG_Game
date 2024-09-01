@@ -5,21 +5,21 @@ using UnityEngine;
 //몬스터 오브젝트 풀링용
 public class MonsterPool : MonoBehaviour
 {
-    [SerializeField] private GameObject monsterPrefab;
+    [SerializeField] private MonsterBase monsterPrefab;
     [SerializeField] private int poolSize;
 
-    private Queue<GameObject> activePool = new Queue<GameObject>();
-    private Queue<GameObject> disactivePool = new Queue<GameObject>();
+    private Queue<MonsterBase> activePool = new Queue<MonsterBase>();
+    private Queue<MonsterBase> disactivePool = new Queue<MonsterBase>();
 
     /// <summary>
     /// 몬스터 생성
     /// </summary>
-    public GameObject GetMonster()
+    public MonsterBase GetMonster()
     {
         if (activePool.Count > 0)
         {
             var monster = disactivePool.Dequeue();
-            monster.SetActive(true);
+            monster.gameObject.SetActive(true);
             return monster;
         }
         else
@@ -29,11 +29,11 @@ public class MonsterPool : MonoBehaviour
         }
     }
 
-    private GameObject CreateNewMonster()
+    private MonsterBase CreateNewMonster()
     {
         var newMonster = Instantiate(monsterPrefab);
         newMonster.transform.SetParent(this.transform);
-        newMonster.SetActive(true);
+        newMonster.gameObject.SetActive(true);
         activePool.Enqueue(newMonster);
         return newMonster;
     }
@@ -41,11 +41,11 @@ public class MonsterPool : MonoBehaviour
     /// <summary>
     /// 몬스터 비활성화
     /// </summary>
-    public void ReturnMonster(GameObject monster)
+    public void ReturnMonster(MonsterBase monster)
     {
         if (activePool.Contains(monster))
         {
-            monster.SetActive(false);
+            monster.gameObject.SetActive(false);
             if (disactivePool.Count > poolSize)
                 DestroyImmediate(monster);
             else

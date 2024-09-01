@@ -14,7 +14,7 @@ public class ModelFileListEditor : EditorWindow
     // 파일의 이름이 원하는 형식과 맞는지 비교
     // 파일의 형식은 숫자+알파벳_알파벳 이나 숫자_알파벳 만 가능
 
-    [MenuItem("Window/Set ModelList")]
+    [MenuItem("Window/Custom/Set ModelList")]
     public static void ShowWindow()
     {
         if (Directory.Exists(folderPath))
