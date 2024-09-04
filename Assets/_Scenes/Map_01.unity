@@ -2552,13 +2552,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4751302763156195719, guid: c11d1927bbb557545ac3f2203c0b6c85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739917612}
+    - targetCorrespondingSourceObject: {fileID: 4751302763156195719, guid: c11d1927bbb557545ac3f2203c0b6c85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739917611}
   m_SourcePrefab: {fileID: 100100000, guid: c11d1927bbb557545ac3f2203c0b6c85, type: 3}
 --- !u!4 &739917609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2517617165616282789, guid: c11d1927bbb557545ac3f2203c0b6c85, type: 3}
   m_PrefabInstance: {fileID: 739917608}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &739917610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4751302763156195719, guid: c11d1927bbb557545ac3f2203c0b6c85, type: 3}
+  m_PrefabInstance: {fileID: 739917608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &739917611
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739917610}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
+--- !u!114 &739917612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739917610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9655145c27ab41741ac3df03c6e9c86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &739917617 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5583407687953865972, guid: c11d1927bbb557545ac3f2203c0b6c85, type: 3}
