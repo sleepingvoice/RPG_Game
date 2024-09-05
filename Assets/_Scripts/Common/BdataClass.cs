@@ -7,7 +7,6 @@ namespace BaseClass
     [Serializable]
     public class CharInfo
     {
-        // 외부에서 값 변경을 어렵게하기위해 사용
         public int hp;
         public int atk;
         public int def;

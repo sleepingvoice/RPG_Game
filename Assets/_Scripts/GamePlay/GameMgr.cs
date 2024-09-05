@@ -10,7 +10,7 @@ public class GameMgr : MonoBehaviour
     #region ΩÃ±€≈Ê
 
     private static GameMgr instance = null;
-    public static GameMgr Instance
+    public static GameMgr ins
     {
         get
         {

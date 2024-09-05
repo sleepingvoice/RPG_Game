@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 176039316}
   - component: {fileID: 176039317}
   - component: {fileID: 176039318}
+  - component: {fileID: 176039319}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -285,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab5e92b61262c347a4769fc73474009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecneMgr: {fileID: 176039317}
   GameProgressValue: 0
+  SecneMgr: {fileID: 176039317}
 --- !u!114 &176039317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterInfo: {fileID: 11400000, guid: 17f6e3734416eba409c1bda07ed7d757, type: 2}
   MapSpawnInfo: {fileID: 11400000, guid: 58df119d32d059949995bb6388ddb236, type: 2}
+--- !u!114 &176039319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176039314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a064a1db466a51f409ce8eb6d8b90f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &301070208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,12 +1230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1a4e5fe1559fa43a9fbdc3b0f06f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ModelName:
-  - 01
-  - 02
-  MonsterModel:
-  - {fileID: 7425992004025767238, guid: 9c301c3067281174d997480ad1495064, type: 3}
-  - {fileID: 7777335980381783021, guid: e2316a133bfebbe4baa8752a264101ce, type: 3}
 --- !u!1 &1079208425
 GameObject:
   m_ObjectHideFlags: 0

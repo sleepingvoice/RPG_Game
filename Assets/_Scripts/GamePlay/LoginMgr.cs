@@ -12,12 +12,12 @@ public class LoginMgr : MonoBehaviour
 
     private void Start()
     {
-        GameMgr.Instance.LoginEvent.OnEvent += Login;
+        GameMgr.ins.LoginEvent.OnEvent += Login;
     }
 
     private void OnDestroy()
     {
-        GameMgr.Instance.LoginEvent.OnEvent -= Login;
+        GameMgr.ins.LoginEvent.OnEvent -= Login;
     }
 
     #region playFab ·Î±×ÀÎ
@@ -33,7 +33,7 @@ public class LoginMgr : MonoBehaviour
         entityId = result.EntityToken.Entity.Id;
         entityType = result.EntityToken.Entity.Type;
 
-        GameMgr.Instance.LoginEvent.FinishEvent();
+        GameMgr.ins.LoginEvent.FinishEvent();
     }
 
     private void OnLoginFailure(PlayFabError error)

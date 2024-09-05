@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    [HideInInspector] public event Action<GameObject> EnterAction;
+    [HideInInspector] public event Action<MonsterBase> EnterAction;
 
     private void Awake()
     {
@@ -19,6 +19,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        EnterAction.Invoke(other.gameObject);
+        if(other.GetComponent<MonsterBase>())
+            EnterAction.Invoke(other.GetComponent<MonsterBase>());
     }
 }

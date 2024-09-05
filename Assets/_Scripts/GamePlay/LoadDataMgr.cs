@@ -14,7 +14,7 @@ public class LoadDataMgr : MonoBehaviour
 
     private void Start()
     {
-        GameMgr.Instance.LoadDataEvent.OnEvent += LoadTitleData;
+        GameMgr.ins.LoadDataEvent.OnEvent += LoadTitleData;
     }
 
     private void LoadTitleData()
@@ -49,7 +49,7 @@ public class LoadDataMgr : MonoBehaviour
     {
         LoadMonster();
         LoadMapSpawn();
-        GameMgr.Instance.LoadDataEvent.FinishEvent();
+        GameMgr.ins.LoadDataEvent.FinishEvent();
     }
 
     private void LoadMonster()

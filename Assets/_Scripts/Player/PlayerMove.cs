@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
 {
     [Header("Transform References")]
     [SerializeField] private Transform movementTrans;
+    [SerializeField] private Transform modelTrans;
 
     [Header("Movement")]
     [SerializeField] private float walkSpeed;
@@ -72,6 +73,8 @@ public class PlayerMove : MonoBehaviour
             RotatePlayer(-rotationSpeed);
         if (Input.GetKey(KeyCode.E))
             RotatePlayer(rotationSpeed);
+
+        modelTrans.localRotation = Quaternion.Euler(0, Mathf.Atan2(horizontalInput, verticalInput) * Mathf.Rad2Deg, 0);
 
         float interpolationAlpha = (Time.time - Time.fixedTime) / Time.fixedDeltaTime;
         m_characterController.Move(Vector3.Lerp(lastFixedPosition, nextFixedPosition, interpolationAlpha) - transform.position);
@@ -152,5 +155,14 @@ public class PlayerMove : MonoBehaviour
         Vector3 rotation = Vector3.up * rotationAmount * 100 * Time.deltaTime;
 
         m_characterController.transform.Rotate(rotation);
+    }
+
+    private int ReturnRot(float InputValue)
+    {
+        if (InputValue < -0.1)
+            return -1;
+        else if (InputValue > 0.1)
+            return 1;
+        return 0;
     }
 }

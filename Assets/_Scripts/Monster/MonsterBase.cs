@@ -1,11 +1,7 @@
 using BaseClass;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.AI;
-using Unity.VisualScripting;
 using System.Collections;
-using System;
-using static UnityEngine.GraphicsBuffer;
 
 //몬스터 기본 기능
 public class MonsterBase : MonoBehaviour

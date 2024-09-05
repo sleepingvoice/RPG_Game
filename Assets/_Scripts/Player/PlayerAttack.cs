@@ -41,8 +41,21 @@ public class PlayerAttack : MonoBehaviour
 
     #endregion
 
+    private void SetWeaponDamageAct()
+    {
+        for (int i = 0; i < weaponList.Count; i++)
+        {
+            weaponList[i].EnterAction += AttackTarget;
+        }
+    }
 
+    public void AttackTarget(MonsterBase Target)
+    {
+        
+    }
 }
+
+#region 에디터
 
 [CustomEditor(typeof(PlayerAttack))]
 public class PlayerAttackEditor : Editor
@@ -50,6 +63,9 @@ public class PlayerAttackEditor : Editor
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
+
+        GUILayout.Space(10);
+
         PlayerAttack Target = (PlayerAttack)target;
         if (GUILayout.Button("무기 세팅"))
         {
@@ -57,3 +73,5 @@ public class PlayerAttackEditor : Editor
         }
     }
 }
+
+#endregion
