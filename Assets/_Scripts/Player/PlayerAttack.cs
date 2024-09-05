@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -41,17 +42,12 @@ public class PlayerAttack : MonoBehaviour
 
     #endregion
 
-    private void SetWeaponDamageAct()
+    public void SetWeaponDamageAct(Action<MonsterBase> ActtacAct)
     {
         for (int i = 0; i < weaponList.Count; i++)
         {
-            weaponList[i].EnterAction += AttackTarget;
+            weaponList[i].EnterAction += ActtacAct;
         }
-    }
-
-    public void AttackTarget(MonsterBase Target)
-    {
-        
     }
 }
 

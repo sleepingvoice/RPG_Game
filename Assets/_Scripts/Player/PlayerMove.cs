@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private bool isGround;
-
+    [SerializeField] private InputMgr _Input;
 
     private float horizontalInput;
     private float verticalInput;
@@ -54,25 +55,12 @@ public class PlayerMove : MonoBehaviour
         horizontalInput = 0.0f;
         verticalInput = 0.0f;
         jumpFlag = false;
+        runFlag = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            jumpFlag = true;
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            runFlag = true;
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-            runFlag = false;
-
-        if (Input.GetKey(KeyCode.Q))
-            RotatePlayer(-rotationSpeed);
-        if (Input.GetKey(KeyCode.E))
-            RotatePlayer(rotationSpeed);
+        InputUpdatae();
 
         modelTrans.localRotation = Quaternion.Euler(0, Mathf.Atan2(horizontalInput, verticalInput) * Mathf.Rad2Deg, 0);
 
@@ -118,6 +106,18 @@ public class PlayerMove : MonoBehaviour
         nextFixedPosition += velocity * Time.fixedDeltaTime;
     }
 
+    private void InputUpdatae()
+    {
+        horizontalInput = _Input.MoveInput.x;
+        verticalInput = _Input.MoveInput.y;
+        jumpFlag = _Input.JumpInput;
+        runFlag = _Input.RunInput;
+        if (_Input.RotateInput < 0)
+            RotatePlayer(-rotationSpeed);
+        else if (_Input.RotateInput > 0)
+            RotatePlayer(rotationSpeed);
+    }
+
     private Vector3 GetXZVelocity(float HorizontalInput, float VerticalInput)
     {
         Vector3 MoveVelocity = movementTrans.forward * VerticalInput + movementTrans.right * HorizontalInput;
@@ -131,7 +131,6 @@ public class PlayerMove : MonoBehaviour
     /// <summary>
     /// 점프판정 체크
     /// </summary>
-    /// <returns></returns>
     private float GetYVelocity()
     {
         if (isGround = !m_groundChecker.IsGrounded()) // 땅에 닿아있지 않는경우
@@ -150,19 +149,13 @@ public class PlayerMove : MonoBehaviour
         };
     }
 
+    /// <summary>
+    /// 회전
+    /// </summary>
     private void RotatePlayer(float rotationAmount)
     {
         Vector3 rotation = Vector3.up * rotationAmount * 100 * Time.deltaTime;
 
         m_characterController.transform.Rotate(rotation);
-    }
-
-    private int ReturnRot(float InputValue)
-    {
-        if (InputValue < -0.1)
-            return -1;
-        else if (InputValue > 0.1)
-            return 1;
-        return 0;
     }
 }

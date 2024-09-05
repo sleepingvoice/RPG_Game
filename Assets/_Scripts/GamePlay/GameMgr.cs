@@ -22,11 +22,15 @@ public class GameMgr : MonoBehaviour
 
     [SerializeField]private GameProgress GameProgressValue = GameProgress.Title;
 
+    //이벤트
     public BeventHandler LoginEvent = new BeventHandler();
     public BeventHandler LoadDataEvent = new BeventHandler();
     public BeventHandler LodingEvent = new BeventHandler();
 
-    public SceneMgr SecneMgr;
+    //매니저
+    [Space(10)]
+    public SceneMgr _SecneMgr;
+    public InputMgr _InputMgr;
 
     private void Awake()
     {

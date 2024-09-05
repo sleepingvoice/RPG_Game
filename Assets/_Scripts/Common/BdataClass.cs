@@ -7,7 +7,11 @@ namespace BaseClass
     [Serializable]
     public class CharInfo
     {
-        public int hp;
+        public int maxHp;
+        public int nowHp;
+        public int maxSp;
+        public int nowSp;
+
         public int atk;
         public int def;
         public string modelName;
@@ -35,7 +39,6 @@ namespace BaseClass
         public string userID;
         public CharInfo playerChar;
         public int level;
-        public int sp;
     }
 
     [Serializable]

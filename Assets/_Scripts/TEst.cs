@@ -45,7 +45,6 @@ public class TEst : MonoBehaviour
         TestInfo1.monsterID = "0001";
         TestInfo1.moveSpeed = 10;
         CharInfo Testchar1 = new CharInfo();
-        Testchar1.hp = 100;
         Testchar1.atk = 10;
         Testchar1.def = 10;
         Testchar1.modelName = "대충경로";
@@ -59,8 +58,7 @@ public class TEst : MonoBehaviour
         TestInfo2.attackSpeed = 2;
         TestInfo2.monsterID = "0002";
         TestInfo2.moveSpeed = 5;
-        CharInfo Testchar2 = new CharInfo();
-        Testchar2.hp = 50;
+        CharInfo Testchar2 = new CharInfo();        
         Testchar2.atk = 5;
         Testchar2.def = 5;
         Testchar2.modelName = "대충경로";
@@ -75,7 +73,6 @@ public class TEst : MonoBehaviour
         TestInfo3.monsterID = "0003";
         TestInfo3.moveSpeed = 20;
         CharInfo Testchar3 = new CharInfo();
-        Testchar3.hp = 200;
         Testchar3.atk = 20;
         Testchar3.def = 20;
         Testchar3.modelName = "대충경로";
