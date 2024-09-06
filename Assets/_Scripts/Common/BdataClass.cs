@@ -41,6 +41,11 @@ namespace BaseClass
         public int level;
     }
 
+    public class PlayerState
+    {
+        
+    }
+
     [Serializable]
     public class PathInfo
     {

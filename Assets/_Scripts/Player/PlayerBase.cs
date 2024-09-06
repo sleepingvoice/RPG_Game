@@ -9,10 +9,11 @@ public class PlayerBase : BCharBase
     private GameMgr gameMgr;
 
     [SerializeField] private PlayerInfo serverPlayerInfo;
+    public PlayerState NowState { get; private set;}
 
-    [SerializeField] private PlayerMove playMove;
-    [SerializeField] private PlayerGorundCheck grounCheck;
-    [SerializeField] private PlayerAttack playerAttack;
+    private PlayerMove playMove;
+    private PlayerGorundCheck groundCheck;
+    private PlayerAttack playerAttack;
     
 
     private void Start()
@@ -21,6 +22,10 @@ public class PlayerBase : BCharBase
             gameMgr = GameMgr.ins;
         else
             Debug.LogError("게임매니저가 없습니다 정상적인 접근이 아닙니다.");
+
+        playMove = this.GetComponent<PlayerMove>();
+        groundCheck = this.GetComponent<PlayerGorundCheck>();
+        playerAttack = this.GetComponent<PlayerAttack>();
     }
 
     private void InitPlayer(PlayerInfo Info)
