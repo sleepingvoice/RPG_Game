@@ -8,7 +8,7 @@ namespace PlayFab.PfEditor
     {
 
         Dictionary<string, MenuItemContainer> items = new Dictionary<string, MenuItemContainer>();
-        
+
         GUIStyle selectedStyle;
         GUIStyle defaultStyle;
         GUIStyle bgStyle;

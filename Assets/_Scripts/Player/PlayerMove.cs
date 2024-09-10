@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
+using BaseClass;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -18,9 +15,6 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Rotation")]
     [SerializeField][Range(0f, 5f)] private float rotationSpeed;
-
-    [Header("animation")]
-    [SerializeField] private Animator playerAni;
 
     [Header("Debug")]
     [SerializeField] private bool isGround;
@@ -39,13 +33,13 @@ public class PlayerMove : MonoBehaviour
     private Vector3 nextFixedPosition;
     private Quaternion nextFixedRotation;
 
+    private PlayerAnimation playAni;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        m_characterController = GetComponent<CharacterController>();
-        m_groundChecker = GetComponent<PlayerGorundCheck>();
+        m_characterController = this.GetComponent<CharacterController>();
+        m_groundChecker = this.GetComponent<PlayerGorundCheck>();
+        playAni = this.GetComponent<PlayerAnimation>();
         velocity = new Vector3(0, 0, 0);
         lastFixedPosition = transform.position;
         lastFixedRotation = transform.rotation;
@@ -58,7 +52,7 @@ public class PlayerMove : MonoBehaviour
         runFlag = false;
     }
 
-    void Update()
+    private void Update()
     {
         InputUpdatae();
 
@@ -70,6 +64,8 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+
         Vector3 ResultVelocity = this.transform.position;
 
         ResultVelocity.x = Mathf.Abs(ResultVelocity.x - nextFixedPosition.x) > 0 ? Mathf.Lerp(ResultVelocity.x, nextFixedPosition.x, 0.5f) : nextFixedPosition.x;
@@ -81,24 +77,13 @@ public class PlayerMove : MonoBehaviour
 
         Vector3 InputVelocity = GetXZVelocity(horizontalInput, verticalInput);
 
+        if (playAni.NowState.attackState != PS_Attack.normal)
+            InputVelocity = Vector3.zero;
+
         if (InputVelocity.magnitude != 0)
-        {
-            if (runFlag)
-            {
-                playerAni.SetBool("run", true);
-                playerAni.SetBool("walk", false);
-            }
-            else
-            {
-                playerAni.SetBool("walk", true);
-                playerAni.SetBool("run", false);
-            }
-        }
+            playAni.PlayerWalkState(runFlag ? PS_Move.run : PS_Move.walk);
         else
-        {
-            playerAni.SetBool("walk", false);
-            playerAni.SetBool("run", false);
-        }
+            playAni.PlayerWalkState(PS_Move.normal);
 
         float yVelocity = GetYVelocity();
         velocity = new Vector3(InputVelocity.x, yVelocity, InputVelocity.z);

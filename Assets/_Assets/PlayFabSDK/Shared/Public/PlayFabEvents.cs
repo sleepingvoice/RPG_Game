@@ -1,5 +1,5 @@
-using PlayFab.SharedModels;
 using PlayFab.Internal;
+using PlayFab.SharedModels;
 
 namespace PlayFab.Events
 {
@@ -14,7 +14,9 @@ namespace PlayFab.Events
         /// <summary>
         /// Private constructor because we call PlayFabEvents.init();
         /// </summary>
-        private PlayFabEvents() { }
+        private PlayFabEvents()
+        {
+        }
 
         public static PlayFabEvents Init()
         {

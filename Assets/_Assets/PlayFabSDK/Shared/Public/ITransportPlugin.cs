@@ -1,14 +1,16 @@
 using System;
-using System.Collections.Generic;
 
 namespace PlayFab
 {
     /// <summary>
     /// Interface of any transport SDK plugin.
     /// </summary>
-    public interface ITransportPlugin: IPlayFabPlugin
+    public interface ITransportPlugin : IPlayFabPlugin
     {
-        bool IsInitialized { get; }
+        bool IsInitialized
+        {
+            get;
+        }
         void Initialize();
 
         // Mirroring MonoBehaviour - Relayed from PlayFabHTTP

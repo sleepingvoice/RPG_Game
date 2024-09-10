@@ -1,9 +1,9 @@
 using PlayFab.PfEditor.EditorModels;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
-using System;
-using System.IO;
 
 namespace PlayFab.PfEditor
 {
@@ -68,10 +68,42 @@ namespace PlayFab.PfEditor
         private DateTime _lastSdkVersionCheck;
         private DateTime _lastEdExVersionCheck;
         public bool PanelIsShown;
-        public string EdSet_latestSdkVersion { get { return _latestSdkVersion; } set { _latestSdkVersion = value; _lastSdkVersionCheck = DateTime.UtcNow; } }
-        public string EdSet_latestEdExVersion { get { return _latestEdExVersion; } set { _latestEdExVersion = value; _lastEdExVersionCheck = DateTime.UtcNow; } }
-        public DateTime EdSet_lastSdkVersionCheck { get { return _lastSdkVersionCheck; } }
-        public DateTime EdSet_lastEdExVersionCheck { get { return _lastEdExVersionCheck; } }
+        public string EdSet_latestSdkVersion
+        {
+            get
+            {
+                return _latestSdkVersion;
+            }
+            set
+            {
+                _latestSdkVersion = value; _lastSdkVersionCheck = DateTime.UtcNow;
+            }
+        }
+        public string EdSet_latestEdExVersion
+        {
+            get
+            {
+                return _latestEdExVersion;
+            }
+            set
+            {
+                _latestEdExVersion = value; _lastEdExVersionCheck = DateTime.UtcNow;
+            }
+        }
+        public DateTime EdSet_lastSdkVersionCheck
+        {
+            get
+            {
+                return _lastSdkVersionCheck;
+            }
+        }
+        public DateTime EdSet_lastEdExVersionCheck
+        {
+            get
+            {
+                return _lastEdExVersionCheck;
+            }
+        }
 
         public int curMainMenuIdx;
         public int curSubMenuIdx;

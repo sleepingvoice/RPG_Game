@@ -1,8 +1,7 @@
+using BaseClass;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using BaseClass;
-using System.Text;
 
 [Serializable]
 public class MapSpawnList

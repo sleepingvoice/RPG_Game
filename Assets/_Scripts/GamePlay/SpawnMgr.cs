@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using BaseClass;
+using UnityEngine;
 
 public class SpawnMgr : MonoBehaviour
 {

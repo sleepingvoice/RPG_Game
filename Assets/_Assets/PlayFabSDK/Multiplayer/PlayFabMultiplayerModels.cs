@@ -1,7 +1,7 @@
 #if !DISABLE_PLAYFABENTITY_API
+using PlayFab.SharedModels;
 using System;
 using System.Collections.Generic;
-using PlayFab.SharedModels;
 
 namespace PlayFab.MultiplayerModels
 {
@@ -48,7 +48,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The metadata associated with the asset.
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
     }
 
     public enum AttributeMergeFunction
@@ -317,7 +317,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Dictionary of build ids and their respective weights for distribution of allocation requests.
         /// </summary>
-        public Dictionary<string,uint> BuildWeightDistribution;
+        public Dictionary<string, uint> BuildWeightDistribution;
     }
 
     [Serializable]
@@ -338,7 +338,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The metadata of the build.
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration and status for each region in the build.
         /// </summary>
@@ -357,7 +357,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity key of the player whose tickets should be canceled.
         /// </summary>
@@ -384,7 +384,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity key of the player whose backfill tickets should be canceled.
         /// </summary>
@@ -424,7 +424,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The name of the queue the ticket is in.
         /// </summary>
@@ -454,7 +454,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The name of the queue the ticket is in.
         /// </summary>
@@ -586,7 +586,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -619,7 +619,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The list of game assets related to the build.
         /// </summary>
@@ -640,7 +640,7 @@ namespace PlayFab.MultiplayerModels
         /// Metadata to tag the build. The keys are case insensitive. The build metadata is made available to the server through
         /// Game Server SDK (GSDK).Constraints: Maximum number of keys: 30, Maximum key length: 50, Maximum value length: 100
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration for the monitoring application on the build
         /// </summary>
@@ -722,7 +722,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The metadata of the build.
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration for the monitoring application for the build
         /// </summary>
@@ -788,7 +788,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The list of game assets related to the build.
         /// </summary>
@@ -814,7 +814,7 @@ namespace PlayFab.MultiplayerModels
         /// Metadata to tag the build. The keys are case insensitive. The build metadata is made available to the server through
         /// Game Server SDK (GSDK).Constraints: Maximum number of keys: 30, Maximum key length: 50, Maximum value length: 100
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration for the monitoring application on the build
         /// </summary>
@@ -901,7 +901,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The metadata of the build.
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration for the monitoring application for the build
         /// </summary>
@@ -968,7 +968,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The list of game assets related to the build.
         /// </summary>
@@ -1003,7 +1003,7 @@ namespace PlayFab.MultiplayerModels
         /// Metadata to tag the build. The keys are case insensitive. The build metadata is made available to the server through
         /// Game Server SDK (GSDK).Constraints: Maximum number of keys: 30, Maximum key length: 50, Maximum value length: 100
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration for the monitoring application on the build
         /// </summary>
@@ -1096,7 +1096,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The metadata of the build.
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The configuration for the monitoring application for the build
         /// </summary>
@@ -1158,13 +1158,13 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The private key-value pairs which are visible to all entities in the lobby. At most 30 key-value pairs may be stored
         /// here, keys are limited to 30 characters and values to 1000. The total size of all lobbyData values may not exceed 4096
         /// bytes. Keys are case sensitive.
         /// </summary>
-        public Dictionary<string,string> LobbyData;
+        public Dictionary<string, string> LobbyData;
         /// <summary>
         /// The maximum number of players allowed in the lobby. The value must be between 2 and 128.
         /// </summary>
@@ -1194,7 +1194,7 @@ namespace PlayFab.MultiplayerModels
         /// number_key1, number_key2, ... number_key30 for numeric values.Numeric values are floats. Values can be at most 256
         /// characters long. The total size of all searchData values may not exceed 1024 bytes.
         /// </summary>
-        public Dictionary<string,string> SearchData;
+        public Dictionary<string, string> SearchData;
         /// <summary>
         /// A setting to control whether connections are used. Defaults to true. When true, notifications are sent to subscribed
         /// players, disconnect detection removes connectionHandles, only owner migration policies using connections are allowed,
@@ -1231,7 +1231,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// How long to attempt matching this ticket in seconds.
         /// </summary>
@@ -1269,7 +1269,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The expiration time for the remote user created. Defaults to expiring in one day if not specified.
         /// </summary>
@@ -1314,7 +1314,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// How long to attempt matching this ticket in seconds.
         /// </summary>
@@ -1351,7 +1351,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// How long to attempt matching this ticket in seconds.
         /// </summary>
@@ -1387,7 +1387,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Additional information about this request that our team can use to better understand the requirements.
         /// </summary>
@@ -1506,7 +1506,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The filename of the asset to delete.
         /// </summary>
@@ -1526,7 +1526,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -1542,7 +1542,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The build region to delete.
         /// </summary>
@@ -1562,7 +1562,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -1574,7 +1574,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The name of the certificate.
         /// </summary>
@@ -1591,7 +1591,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The container image repository we want to delete.
         /// </summary>
@@ -1607,7 +1607,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The id of the lobby.
         /// </summary>
@@ -1628,7 +1628,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The region of the multiplayer server where the remote user is to delete.
         /// </summary>
@@ -1652,7 +1652,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The name of the secret.
         /// </summary>
@@ -1767,7 +1767,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -1814,7 +1814,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Indicates which other platforms' friends this query should link to.
         /// </summary>
@@ -1869,7 +1869,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// OData style string that contains one or more filters. Only the following operators are supported: "and" (logical and),
         /// "eq" (equal), "ne" (not equals), "ge" (greater than or equal), "gt" (greater than), "le" (less than or equal), and "lt"
@@ -1942,7 +1942,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Search data.
         /// </summary>
-        public Dictionary<string,string> SearchData;
+        public Dictionary<string, string> SearchData;
     }
 
     [Serializable]
@@ -2004,7 +2004,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The asset's file name to get the download URL for.
         /// </summary>
@@ -2033,7 +2033,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The asset's file name to get the upload URL for.
         /// </summary>
@@ -2066,7 +2066,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -2082,7 +2082,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -2138,7 +2138,7 @@ namespace PlayFab.MultiplayerModels
         /// Metadata of the build. The keys are case insensitive. The build metadata is made available to the server through Game
         /// Server SDK (GSDK).
         /// </summary>
-        public Dictionary<string,string> Metadata;
+        public Dictionary<string, string> Metadata;
         /// <summary>
         /// The number of multiplayer servers to hosted on a single VM of the build.
         /// </summary>
@@ -2188,7 +2188,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -2217,7 +2217,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The id of the lobby.
         /// </summary>
@@ -2242,7 +2242,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The Id of the matchmaking queue to retrieve.
         /// </summary>
@@ -2268,7 +2268,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Determines whether the matchmaking attributes will be returned as an escaped JSON string or as an un-escaped JSON
         /// object.
@@ -2346,7 +2346,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Determines whether the matchmaking attributes will be returned as an escaped JSON string or as an un-escaped JSON
         /// object.
@@ -2401,7 +2401,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The title generated guid string session ID of the multiplayer server to get details for. This is to keep track of
         /// multiplayer server sessions.
@@ -2472,7 +2472,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The server ID of multiplayer server to get logs for.
         /// </summary>
@@ -2498,7 +2498,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The server ID of multiplayer server to get logs for.
         /// </summary>
@@ -2518,7 +2518,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The name of the queue.
         /// </summary>
@@ -2551,7 +2551,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The region of the multiplayer server to get remote login information for.
         /// </summary>
@@ -2585,7 +2585,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Determines whether the matchmaking attributes will be returned as an escaped JSON string or as an un-escaped JSON
         /// object.
@@ -2652,7 +2652,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -2673,7 +2673,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Id of the change request to get.
         /// </summary>
@@ -2698,7 +2698,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -2735,7 +2735,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity invited to the lobby.
         /// </summary>
@@ -2773,7 +2773,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The maximum number of players allowed in the lobby. The value must be between 2 and 128.
         /// </summary>
@@ -2783,7 +2783,7 @@ namespace PlayFab.MultiplayerModels
         /// entities in the lobby. At most 30 key-value pairs may be stored here, keys are limited to 30 characters and values to
         /// 1000. The total size of all memberData values may not exceed 4096 bytes. Keys are case sensitive.
         /// </summary>
-        public Dictionary<string,string> MemberData;
+        public Dictionary<string, string> MemberData;
         /// <summary>
         /// The member entity who is joining the lobby. The first member to join will be the lobby owner.
         /// </summary>
@@ -2822,13 +2822,13 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The private key-value pairs which are visible to all entities in the lobby but can only be modified by the joined
         /// server.At most 30 key - value pairs may be stored here, keys are limited to 30 characters and values to 1000.The total
         /// size of all serverData values may not exceed 4096 bytes.
         /// </summary>
-        public Dictionary<string,string> ServerData;
+        public Dictionary<string, string> ServerData;
         /// <summary>
         /// The game_server entity which is joining the Lobby. If a different game_server entity has already joined the request will
         /// fail unless the joined entity is disconnected, in which case the incoming game_server entity will replace the
@@ -2859,13 +2859,13 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The private key-value pairs used by the member to communicate information to other members and the owner. Visible to all
         /// entities in the lobby. At most 30 key-value pairs may be stored here, keys are limited to 30 characters and values to
         /// 1000. The total size of all memberData values may not exceed 4096 bytes.Keys are case sensitive.
         /// </summary>
-        public Dictionary<string,string> MemberData;
+        public Dictionary<string, string> MemberData;
         /// <summary>
         /// The member entity who is joining the lobby.
         /// </summary>
@@ -2893,7 +2893,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The User who wants to join the ticket. Their Id must be listed in PlayFabIdsToMatchWith.
         /// </summary>
@@ -2923,7 +2923,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The id of the lobby.
         /// </summary>
@@ -2944,7 +2944,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The id of the lobby.
         /// </summary>
@@ -3054,7 +3054,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3091,7 +3091,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3128,7 +3128,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3165,7 +3165,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3202,7 +3202,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3239,7 +3239,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The container images we want to list tags for.
         /// </summary>
@@ -3280,7 +3280,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -3302,7 +3302,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity key for which to find the ticket Ids.
         /// </summary>
@@ -3335,7 +3335,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3376,7 +3376,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -3405,7 +3405,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Indicates that the response should contain Qos servers for all regions, including those where there are no builds
         /// deployed for the title.
@@ -3443,7 +3443,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3480,7 +3480,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity key for which to find the ticket Ids.
         /// </summary>
@@ -3509,7 +3509,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -3534,7 +3534,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The page size for the request.
         /// </summary>
@@ -3585,7 +3585,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Lobby data.
         /// </summary>
-        public Dictionary<string,string> LobbyData;
+        public Dictionary<string, string> LobbyData;
         /// <summary>
         /// Id to uniquely identify a lobby.
         /// </summary>
@@ -3618,7 +3618,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Search data.
         /// </summary>
-        public Dictionary<string,string> SearchData;
+        public Dictionary<string, string> SearchData;
         /// <summary>
         /// Preview: Lobby joined server. This is not the server owner, rather the server that has joined a client owned lobby.
         /// </summary>
@@ -3644,7 +3644,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Key-value pairs specific to the joined server.
         /// </summary>
-        public Dictionary<string,string> ServerData;
+        public Dictionary<string, string> ServerData;
         /// <summary>
         /// The server entity key.
         /// </summary>
@@ -3682,7 +3682,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Search data.
         /// </summary>
-        public Dictionary<string,string> SearchData;
+        public Dictionary<string, string> SearchData;
     }
 
     /// <summary>
@@ -3885,7 +3885,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Key-value pairs specific to member.
         /// </summary>
-        public Dictionary<string,string> MemberData;
+        public Dictionary<string, string> MemberData;
         /// <summary>
         /// The member entity key.
         /// </summary>
@@ -4238,7 +4238,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The Id of the matchmaking queue to remove.
         /// </summary>
@@ -4260,7 +4260,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The id of the lobby.
         /// </summary>
@@ -4292,7 +4292,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Initial list of players (potentially matchmade) allowed to connect to the game. This list is passed to the game server
         /// when requested (via GSDK) and can be used to validate players connecting to it.
@@ -4377,7 +4377,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The network configuration for this request.
         /// </summary>
@@ -4421,7 +4421,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     [Serializable]
@@ -4625,7 +4625,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The matchmaking queue config.
         /// </summary>
@@ -4648,7 +4648,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// A guid string session ID of the multiplayer server to shut down.
         /// </summary>
@@ -4748,7 +4748,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity performing the subscription.
         /// </summary>
@@ -4789,7 +4789,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity performing the subscription. The entity must be authorized to use this connectionHandle.
         /// </summary>
@@ -4932,7 +4932,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity which performed the subscription.
         /// </summary>
@@ -4966,7 +4966,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity performing the unsubscription. The entity must be authorized to use this connectionHandle.
         /// </summary>
@@ -5005,7 +5005,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The container image which tag we want to remove.
         /// </summary>
@@ -5037,7 +5037,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -5057,7 +5057,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -5077,7 +5077,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -5097,7 +5097,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
     }
 
     /// <summary>
@@ -5110,7 +5110,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The id of the lobby.
         /// </summary>
@@ -5121,7 +5121,7 @@ namespace PlayFab.MultiplayerModels
         /// be an arbitrary string of at most 30 characters. The total size of all serverData values may not exceed 4096 bytes.
         /// Values are not individually limited. There can be up to 30 key-value pairs stored here. Keys are case sensitive.
         /// </summary>
-        public Dictionary<string,string> ServerData;
+        public Dictionary<string, string> ServerData;
         /// <summary>
         /// The keys to delete from the lobby serverData. Optional. Optional. Deletes key-value pairs on the lobby. Only the current
         /// joined lobby server can delete serverData. All the specified keys will be removed from the serverData. Keys that do not
@@ -5153,14 +5153,14 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The private key-value pairs which are visible to all entities in the lobby. Optional. Sets or updates key-value pairs on
         /// the lobby. Only the current lobby owner can set lobby data. Keys may be an arbitrary string of at most 30 characters.
         /// The total size of all lobbyData values may not exceed 4096 bytes. Values are not individually limited. There can be up
         /// to 30 key-value pairs stored here. Keys are case sensitive.
         /// </summary>
-        public Dictionary<string,string> LobbyData;
+        public Dictionary<string, string> LobbyData;
         /// <summary>
         /// The keys to delete from the lobby LobbyData. Optional. Behaves similar to searchDataToDelete, but applies to lobbyData.
         /// </summary>
@@ -5182,7 +5182,7 @@ namespace PlayFab.MultiplayerModels
         /// here, keys are limited to 30 characters and values to 1000. The total size of all memberData values may not exceed 4096
         /// bytes. Keys are case sensitive. Servers cannot specifiy this.
         /// </summary>
-        public Dictionary<string,string> MemberData;
+        public Dictionary<string, string> MemberData;
         /// <summary>
         /// The keys to delete from the lobby MemberData. Optional. Deletes key-value pairs on the caller's member data. All the
         /// specified keys will be removed from the caller's member data. Keys that do not exist are a no-op. If the key to delete
@@ -5218,7 +5218,7 @@ namespace PlayFab.MultiplayerModels
         /// number_key30 for numeric values. Numeric values are floats. Values can be at most 256 characters long. The total size of
         /// all searchData values may not exceed 1024 bytes.Keys are case sensitive.
         /// </summary>
-        public Dictionary<string,string> SearchData;
+        public Dictionary<string, string> SearchData;
         /// <summary>
         /// The keys to delete from the lobby SearchData. Optional. Deletes key-value pairs on the lobby. Only the current lobby
         /// owner can delete search data. All the specified keys will be removed from the search data. Keys that do not exist in the
@@ -5236,7 +5236,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Forces the certificate renewal if the certificate already exists. Default is false
         /// </summary>
@@ -5256,7 +5256,7 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Forces the secret renewal if the secret already exists. Default is false
         /// </summary>

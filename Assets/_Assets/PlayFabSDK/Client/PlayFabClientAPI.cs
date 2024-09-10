@@ -1,9 +1,9 @@
 #if !DISABLE_PLAYFABCLIENT_API && !DISABLE_PLAYFAB_STATIC_API
 
-using System;
-using System.Collections.Generic;
 using PlayFab.ClientModels;
 using PlayFab.Internal;
+using System;
+using System.Collections.Generic;
 
 namespace PlayFab
 {
@@ -13,7 +13,9 @@ namespace PlayFab
     /// </summary>
     public static class PlayFabClientAPI
     {
-        static PlayFabClientAPI() {}
+        static PlayFabClientAPI()
+        {
+        }
 
         /// <summary>
         /// Verify client login.
@@ -42,7 +44,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AcceptTrade", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -56,7 +58,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AddFriend", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -71,7 +73,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AddGenericID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -84,7 +86,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AddOrUpdateContactEmail", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -99,7 +101,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AddSharedGroupMembers", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -113,7 +115,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AddUsernamePassword", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -127,7 +129,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AddUserVirtualCurrency", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -140,7 +142,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AndroidDevicePushNotificationRegistration", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -153,7 +155,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/AttributeInstall", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -168,7 +170,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/CancelTrade", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -183,7 +185,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ConfirmPurchase", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -198,7 +200,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ConsumeItem", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -211,7 +213,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ConsumeMicrosoftStoreEntitlements", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -225,7 +227,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ConsumePS5Entitlements", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -238,7 +240,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ConsumePSNEntitlements", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -252,7 +254,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ConsumeXboxEntitlements", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -268,7 +270,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/CreateSharedGroup", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -282,7 +284,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ExecuteCloudScript", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -297,9 +299,12 @@ namespace PlayFab
             {
                 var serializer = PluginManager.GetPlugin<ISerializerPlugin>(PluginContract.PlayFab_Serializer);
                 var wrappedJson = serializer.SerializeObject(wrappedResult.FunctionResult);
-                try {
+                try
+                {
                     wrappedResult.FunctionResult = serializer.DeserializeObject<TOut>(wrappedJson);
-                } catch (Exception) {
+                }
+                catch (Exception)
+                {
                     wrappedResult.FunctionResult = wrappedJson;
                     wrappedResult.Logs.Add(new LogStatement { Level = "Warning", Data = wrappedJson, Message = "Sdk Message: Could not deserialize result as: " + typeof(TOut).Name });
                 }
@@ -315,7 +320,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetAccountInfo", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -328,7 +333,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetAdPlacements", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -342,7 +347,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetAllUsersCharacters", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -356,7 +361,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetCatalogItems", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -369,7 +374,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetCharacterData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -383,7 +388,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetCharacterInventory", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -396,7 +401,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetCharacterLeaderboard", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -409,7 +414,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetCharacterReadOnlyData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -422,7 +427,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetCharacterStatistics", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -440,7 +445,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetContentDownloadUrl", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -454,7 +459,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetFriendLeaderboard", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -468,7 +473,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetFriendLeaderboardAroundPlayer", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -482,7 +487,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetFriendsList", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -495,7 +500,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetLeaderboard", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -508,7 +513,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetLeaderboardAroundCharacter", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -522,7 +527,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetLeaderboardAroundPlayer", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -535,7 +540,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetLeaderboardForUserCharacters", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -551,7 +556,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPaymentToken", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -565,7 +570,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPhotonAuthenticationToken", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -578,7 +583,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerCombinedInfo", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -591,7 +596,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerProfile", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -604,7 +609,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerSegments", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -618,7 +623,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerStatistics", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -631,7 +636,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerStatisticVersions", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -644,7 +649,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerTags", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -657,7 +662,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayerTrades", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -670,7 +675,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromFacebookIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -683,7 +688,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromFacebookInstantGamesIds", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -697,7 +702,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromGameCenterIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -712,7 +717,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromGenericIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -726,7 +731,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromGoogleIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -741,7 +746,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromGooglePlayGamesPlayerIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -756,7 +761,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromKongregateIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -769,7 +774,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromNintendoServiceAccountIds", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -782,7 +787,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromNintendoSwitchDeviceIds", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -795,7 +800,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromPSNAccountIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -808,7 +813,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromPSNOnlineIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -822,7 +827,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromSteamIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -837,7 +842,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromTwitchIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -850,7 +855,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPlayFabIDsFromXboxLiveIDs", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -863,7 +868,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPublisherData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -878,7 +883,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetPurchase", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -894,7 +899,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetSharedGroupData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -908,7 +913,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetStoreItems", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -921,7 +926,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetTime", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -934,7 +939,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetTitleData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -947,7 +952,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetTitleNews", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -972,7 +977,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetTradeStatus", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -985,7 +990,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetUserData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -999,7 +1004,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetUserInventory", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1012,7 +1017,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetUserPublisherData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1025,7 +1030,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetUserPublisherReadOnlyData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1038,7 +1043,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GetUserReadOnlyData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1052,7 +1057,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/GrantCharacterToUser", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1065,7 +1070,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkAndroidDeviceID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1078,7 +1083,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkApple", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1091,7 +1096,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkCustomID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1104,7 +1109,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkFacebookAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1117,7 +1122,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkFacebookInstantGamesId", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1133,7 +1138,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkGameCenterAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1146,7 +1151,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkGoogleAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1160,7 +1165,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkGooglePlayGamesServicesAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1173,7 +1178,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkIOSDeviceID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1186,7 +1191,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkKongregate", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1199,7 +1204,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkNintendoServiceAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1212,7 +1217,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkNintendoSwitchDeviceId", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1226,7 +1231,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkOpenIdConnect", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1239,7 +1244,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkPSNAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1252,7 +1257,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkSteamAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1265,7 +1270,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkTwitch", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1278,7 +1283,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/LinkXboxAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1558,7 +1563,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/OpenTrade", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1572,7 +1577,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/PayForPurchase", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1587,7 +1592,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/PurchaseItem", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1602,7 +1607,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RedeemCoupon", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1615,7 +1620,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RefreshPSNAuthToken", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1628,7 +1633,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RegisterForIOSPushNotification", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1655,7 +1660,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RemoveContactEmail", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1668,7 +1673,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RemoveFriend", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1681,7 +1686,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RemoveGenericID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1697,7 +1702,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RemoveSharedGroupMembers", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1710,7 +1715,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ReportAdActivity", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1724,7 +1729,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ReportDeviceInfo", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1738,7 +1743,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ReportPlayer", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1752,7 +1757,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RestoreIOSPurchases", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1765,7 +1770,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/RewardAdActivity", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1792,7 +1797,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/SetFriendTags", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1806,7 +1811,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/SetPlayerSecret", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1820,7 +1825,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/StartPurchase", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1835,7 +1840,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/SubtractUserVirtualCurrency", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1848,7 +1853,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkAndroidDeviceID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1861,7 +1866,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkApple", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1874,7 +1879,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkCustomID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1887,7 +1892,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkFacebookAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1900,7 +1905,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkFacebookInstantGamesId", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1913,7 +1918,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkGameCenterAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1927,7 +1932,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkGoogleAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1940,7 +1945,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkGooglePlayGamesServicesAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1953,7 +1958,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkIOSDeviceID", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1966,7 +1971,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkKongregate", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1979,7 +1984,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkNintendoServiceAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -1992,7 +1997,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkNintendoSwitchDeviceId", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2006,7 +2011,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkOpenIdConnect", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2019,7 +2024,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkPSNAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2032,7 +2037,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkSteamAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2045,7 +2050,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkTwitch", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2058,7 +2063,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlinkXboxAccount", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2074,7 +2079,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlockContainerInstance", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2090,7 +2095,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UnlockContainerItem", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2103,7 +2108,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateAvatarUrl", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2116,7 +2121,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateCharacterData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2130,7 +2135,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateCharacterStatistics", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2144,7 +2149,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdatePlayerStatistics", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2161,7 +2166,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateSharedGroupData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2174,7 +2179,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateUserData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2187,7 +2192,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateUserPublisherData", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2200,7 +2205,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/UpdateUserTitleDisplayName", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2215,7 +2220,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ValidateAmazonIAPReceipt", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2229,7 +2234,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ValidateGooglePlayPurchase", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2244,7 +2249,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ValidateIOSReceipt", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2259,7 +2264,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/ValidateWindowsStoreReceipt", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2272,7 +2277,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/WriteCharacterEvent", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2285,7 +2290,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/WritePlayerEvent", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
@@ -2298,7 +2303,7 @@ namespace PlayFab
         {
             var context = (request == null ? null : request.AuthenticationContext) ?? PlayFabSettings.staticPlayer;
             var callSettings = PlayFabSettings.staticSettings;
-            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn,"Must be logged in to call this method");
+            if (!context.IsClientLoggedIn()) throw new PlayFabException(PlayFabExceptionCode.NotLoggedIn, "Must be logged in to call this method");
 
 
             PlayFabHttp.MakeApiCall("/Client/WriteTitleEvent", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);

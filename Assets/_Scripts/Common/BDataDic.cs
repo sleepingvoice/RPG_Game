@@ -1,4 +1,3 @@
-using BaseClass;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +20,7 @@ public class BdataDic<T>
     public Dictionary<string, T> JsonToDic(string Json)
     {
         var DataList = JsonUtility.FromJson<LoadDataList>(Json);
-        
+
         if (DataList == null) // 만약 없다면 빈것그대로 보내줌
             return new Dictionary<string, T>();
 

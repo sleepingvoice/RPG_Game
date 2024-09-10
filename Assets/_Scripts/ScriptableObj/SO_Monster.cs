@@ -1,8 +1,7 @@
+using BaseClass;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using BaseClass;
-using System.Text;
 
 [Serializable]
 public class MapList
@@ -21,7 +20,7 @@ public class SO_Monster : ScriptableObject
     public void UpdateInspectorDisplay()
     {
         monsterDicDisplay = new List<MapList>();
-        
+
         foreach (var kvp in monsterDic)
         {
             MapList Test = new MapList();

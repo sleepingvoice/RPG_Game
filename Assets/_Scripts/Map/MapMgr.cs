@@ -19,7 +19,7 @@ public class MapMgr : MonoBehaviour
         {
             MapName.Add(PathList);
         }
-        
+
         Debug.Log("경로를 모두 저장하였습니다.");
     }
 

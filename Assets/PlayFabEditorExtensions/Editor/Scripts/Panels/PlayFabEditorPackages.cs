@@ -7,7 +7,13 @@ namespace PlayFab.PfEditor
     {
         private const int buttonWidth = 150;
 
-        public static bool IsPubSubPresent { get { return GetIsPubSubTypePresent(); } }
+        public static bool IsPubSubPresent
+        {
+            get
+            {
+                return GetIsPubSubTypePresent();
+            }
+        }
 
         public static void DrawPackagesMenu()
         {

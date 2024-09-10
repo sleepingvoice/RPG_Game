@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    [HideInInspector] public event Action<MonsterBase> EnterAction;
+    [HideInInspector] public event Action<MonsterBase> EnterAction = null;
 
     private void Awake()
     {
@@ -14,12 +11,20 @@ public class PlayerWeapon : MonoBehaviour
         {
             var Col = this.gameObject.AddComponent<MeshCollider>();
             Col.convex = true;
+            Col.isTrigger = true;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<MonsterBase>())
+        Debug.Log("들어옴");
+        if (other.GetComponent<MonsterBase>())
+        {
+            if (EnterAction == null)
+                return;
+
             EnterAction.Invoke(other.GetComponent<MonsterBase>());
+            Debug.Log("플레이어 공격");
+        }
     }
 }

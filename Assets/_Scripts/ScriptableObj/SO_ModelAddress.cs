@@ -1,11 +1,10 @@
 using BaseClass;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ModelAddress",menuName = "ScriptableObjects/ModelAdress",order = 1)]
+[CreateAssetMenu(fileName = "ModelAddress", menuName = "ScriptableObjects/ModelAdress", order = 1)]
 public class SO_ModelAddress : ScriptableObject
 {
     [SerializeField] private List<string> ModelNameList;

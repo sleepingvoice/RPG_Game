@@ -10,7 +10,13 @@ namespace PlayFab.PfEditor
     public class PlayFabEditorSDKTools : UnityEditor.Editor
     {
         private const int buttonWidth = 150;
-        public static bool IsInstalled { get { return GetPlayFabSettings() != null; } }
+        public static bool IsInstalled
+        {
+            get
+            {
+                return GetPlayFabSettings() != null;
+            }
+        }
 
         private static Type playFabSettingsType = null;
         private static string installedSdkVersion = string.Empty;
@@ -136,7 +142,7 @@ namespace PlayFab.PfEditor
                         case 0:
                             GUI.FocusControl("logout");
                             focusIndex = 3;
-                            break;                       
+                            break;
                         case 1:
                             GUI.FocusControl("install_playfabsdk");
                             focusIndex = 1;
@@ -404,7 +410,7 @@ namespace PlayFab.PfEditor
                         if (eachType.Name == PlayFabEditorHelper.PLAYFAB_SETTINGS_TYPENAME)
                             playFabSettingsType = eachType;
             }
-	    
+
             //if (playFabSettingsType == typeof(object))
             //    Debug.LogWarning("Should not have gotten here: "  + allAssemblies.Length);
             //else

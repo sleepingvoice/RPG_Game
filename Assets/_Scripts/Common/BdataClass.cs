@@ -41,9 +41,10 @@ namespace BaseClass
         public int level;
     }
 
-    public class PlayerState
+    public class PlayerAniState
     {
-        
+        public PS_Move moveState;
+        public PS_Attack attackState;
     }
 
     [Serializable]

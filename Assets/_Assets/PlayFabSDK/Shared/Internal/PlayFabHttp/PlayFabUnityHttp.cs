@@ -3,7 +3,6 @@
 using PlayFab.SharedModels;
 using System;
 using System.Collections;
-using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -14,13 +13,26 @@ namespace PlayFab.Internal
         private bool _isInitialized = false;
         private readonly int _pendingWwwMessages = 0;
 
-        public bool IsInitialized { get { return _isInitialized; } }
+        public bool IsInitialized
+        {
+            get
+            {
+                return _isInitialized;
+            }
+        }
 
-        public void Initialize() { _isInitialized = true; }
+        public void Initialize()
+        {
+            _isInitialized = true;
+        }
 
-        public void Update() { }
+        public void Update()
+        {
+        }
 
-        public void OnDestroy() { }
+        public void OnDestroy()
+        {
+        }
 
         public void SimpleGetCall(string fullUrl, Action<byte[]> successCallback, Action<string> errorCallback)
         {
@@ -78,11 +90,11 @@ namespace PlayFab.Internal
                     request = new UnityWebRequest(fullUrl, "POST");
                     request.uploadHandler = (UploadHandler)new UploadHandlerRaw(payload);
                     request.SetRequestHeader("Content-Type", "application/json");
-                    
+
                     if (PlayFabSettings.staticSettings.CompressResponses)
                     {
                         request.SetRequestHeader("Accept-Encoding", "gzip");
-                        request.downloadHandler = PlayFabSettings.staticSettings.DecompressWithDownloadHandler ? new GzipDownloadHandler() 
+                        request.downloadHandler = PlayFabSettings.staticSettings.DecompressWithDownloadHandler ? new GzipDownloadHandler()
                                                                                                                : new DownloadHandlerBuffer();
                     }
                     else

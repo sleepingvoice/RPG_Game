@@ -1,7 +1,7 @@
 using BaseClass;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
 
 //몬스터 기본 기능
 public class MonsterBase : BCharBase

@@ -1,20 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using BaseClass;
 using System;
+using UnityEngine;
 
 public class PlayerBase : BCharBase
 {
     private GameMgr gameMgr;
 
     [SerializeField] private PlayerInfo serverPlayerInfo;
-    public PlayerState NowState { get; private set;}
+
 
     private PlayerMove playMove;
     private PlayerGorundCheck groundCheck;
     private PlayerAttack playerAttack;
-    
+
 
     private void Start()
     {
@@ -36,7 +34,8 @@ public class PlayerBase : BCharBase
 
     private void AttackSet()
     {
-        Action<MonsterBase> AddAction = (MonsterBase target) => {
+        Action<MonsterBase> AddAction = (MonsterBase target) =>
+        {
             target.Dameged(baseCharInfo.atk);
         };
         playerAttack.SetWeaponDamageAct(AddAction);

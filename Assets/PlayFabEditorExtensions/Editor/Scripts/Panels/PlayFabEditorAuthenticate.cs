@@ -19,12 +19,15 @@ namespace PlayFab.PfEditor
         private static bool isShiftKeyPressed = false;
         private static bool isInitialized = false;
 
-        public enum PanelDisplayStates { Register, Login, TwoFactorPrompt }
+        public enum PanelDisplayStates
+        {
+            Register, Login, TwoFactorPrompt
+        }
         private static PanelDisplayStates activeState = PanelDisplayStates.Login;
         #endregion
 
-#region draw calls
-private static void shiftKeyHandler()
+        #region draw calls
+        private static void shiftKeyHandler()
         {
             var e = Event.current;
             if (e.keyCode == KeyCode.LeftShift || e.keyCode == KeyCode.RightShift)
@@ -306,7 +309,7 @@ private static void shiftKeyHandler()
                 using (new UnityHorizontal(PlayFabEditorHelper.uiStyle.GetStyle("labelStyle")))
                 {
                     GUI.SetNextControlName("create_account");
-                    if (GUILayout.Button("CREATE AN ACCOUNT", PlayFabEditorHelper.uiStyle.GetStyle("Button"), GUILayout.MinHeight(35),GUILayout.MaxWidth(180)))
+                    if (GUILayout.Button("CREATE AN ACCOUNT", PlayFabEditorHelper.uiStyle.GetStyle("Button"), GUILayout.MinHeight(35), GUILayout.MaxWidth(180)))
                     {
                         activeState = PanelDisplayStates.Register;
                     }
@@ -513,13 +516,14 @@ private static void shiftKeyHandler()
                 var tokenHandler = new JwtSecurityTokenHandler();
                 JwtSecurityToken jwtToken = tokenHandler.ReadJwtToken(authResult.AccessToken);
 
-                foreach(var audience in jwtToken.Audiences)
+                foreach (var audience in jwtToken.Audiences)
                 {
                     if (audience.Contains(PlayFabEditorHelper.ED_EX_AAD_SCOPE))
                     {
                         PlayFabEditorPrefsSO.Instance.AadAuthorization = authResult.AccessToken;
-                        
-                        PlayFabEditorApi.LoginWithAAD(new LoginWithAADRequest() {
+
+                        PlayFabEditorApi.LoginWithAAD(new LoginWithAADRequest()
+                        {
                             DeveloperToolProductName = PlayFabEditorHelper.EDEX_NAME,
                             DeveloperToolProductVersion = PlayFabEditorHelper.EDEX_VERSION
                         }, (result) =>
@@ -535,7 +539,7 @@ private static void shiftKeyHandler()
                     else
                     {
                         Debug.Log($"Token acquired but for wrong audience: {audience}");
-                    } 
+                    }
                 }
             }
         }

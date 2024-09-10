@@ -15,7 +15,10 @@ namespace PlayFab.PfEditor
 
         #region EdEx Variables
         // vars for the plugin-wide event system
-        public enum EdExStates { OnLogin, OnLogout, OnMenuItemClicked, OnSubmenuItemClicked, OnHttpReq, OnHttpRes, OnError, OnSuccess, OnWarning }
+        public enum EdExStates
+        {
+            OnLogin, OnLogout, OnMenuItemClicked, OnSubmenuItemClicked, OnHttpReq, OnHttpRes, OnError, OnSuccess, OnWarning
+        }
 
         public delegate void PlayFabEdExStateHandler(EdExStates state, string status, string misc);
         public static event PlayFabEdExStateHandler EdExStateUpdate;

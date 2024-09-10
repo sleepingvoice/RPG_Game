@@ -1,5 +1,3 @@
-using PlayFab.Internal;
-
 namespace PlayFab.SharedModels
 {
     public class HttpResponseObject
@@ -18,7 +16,9 @@ namespace PlayFab.SharedModels
         }
     }
 
-    public interface IPlayFabInstanceApi { }
+    public interface IPlayFabInstanceApi
+    {
+    }
 
     public class PlayFabRequestCommon : PlayFabBaseModel
     {

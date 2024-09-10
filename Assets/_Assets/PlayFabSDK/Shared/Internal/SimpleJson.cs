@@ -62,7 +62,6 @@ using System.Dynamic;
 #endif
 using System.Globalization;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Text;
 
@@ -103,7 +102,9 @@ namespace PlayFab.Json
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonArray"/> class.
         /// </summary>
-        public JsonArray() { }
+        public JsonArray()
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonArray"/> class.
@@ -167,7 +168,10 @@ namespace PlayFab.Json
         /// <value></value>
         public object this[int index]
         {
-            get { return GetAtIndex(_members, index); }
+            get
+            {
+                return GetAtIndex(_members, index);
+            }
         }
 
         internal static object GetAtIndex(IDictionary<string, object> obj, int index)
@@ -210,7 +214,10 @@ namespace PlayFab.Json
         /// <value>The keys.</value>
         public ICollection<string> Keys
         {
-            get { return _members.Keys; }
+            get
+            {
+                return _members.Keys;
+            }
         }
 
         /// <summary>
@@ -240,7 +247,10 @@ namespace PlayFab.Json
         /// <value>The values.</value>
         public ICollection<object> Values
         {
-            get { return _members.Values; }
+            get
+            {
+                return _members.Values;
+            }
         }
 
         /// <summary>
@@ -249,8 +259,14 @@ namespace PlayFab.Json
         /// <value></value>
         public object this[string key]
         {
-            get { return _members[key]; }
-            set { _members[key] = value; }
+            get
+            {
+                return _members[key];
+            }
+            set
+            {
+                _members[key] = value;
+            }
         }
 
         /// <summary>
@@ -306,7 +322,10 @@ namespace PlayFab.Json
         /// <value>The count.</value>
         public int Count
         {
-            get { return _members.Count; }
+            get
+            {
+                return _members.Count;
+            }
         }
 
         /// <summary>
@@ -317,7 +336,10 @@ namespace PlayFab.Json
         /// </value>
         public bool IsReadOnly
         {
-            get { return false; }
+            get
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -2003,7 +2025,10 @@ namespace PlayFab.Json
 
             public ICollection<TKey> Keys
             {
-                get { return _dictionary.Keys; }
+                get
+                {
+                    return _dictionary.Keys;
+                }
             }
 
             public bool Remove(TKey key)
@@ -2019,13 +2044,22 @@ namespace PlayFab.Json
 
             public ICollection<TValue> Values
             {
-                get { return _dictionary.Values; }
+                get
+                {
+                    return _dictionary.Values;
+                }
             }
 
             public TValue this[TKey key]
             {
-                get { return Get(key); }
-                set { throw new NotImplementedException(); }
+                get
+                {
+                    return Get(key);
+                }
+                set
+                {
+                    throw new NotImplementedException();
+                }
             }
 
             public void Add(KeyValuePair<TKey, TValue> item)
@@ -2050,12 +2084,18 @@ namespace PlayFab.Json
 
             public int Count
             {
-                get { return _dictionary.Count; }
+                get
+                {
+                    return _dictionary.Count;
+                }
             }
 
             public bool IsReadOnly
             {
-                get { throw new NotImplementedException(); }
+                get
+                {
+                    throw new NotImplementedException();
+                }
             }
 
             public bool Remove(KeyValuePair<TKey, TValue> item)

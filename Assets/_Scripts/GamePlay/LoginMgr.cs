@@ -1,5 +1,5 @@
-using PlayFab.ClientModels;
 using PlayFab;
+using PlayFab.ClientModels;
 using UnityEngine;
 
 public class LoginMgr : MonoBehaviour

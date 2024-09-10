@@ -1,5 +1,4 @@
 using PlayFab;
-using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using UnityEngine.Networking;
@@ -7,13 +6,22 @@ using UnityEngine.Networking;
 public class GzipDownloadHandler : DownloadHandlerScript
 {
     private byte[] _data;
-    public byte[] Data { get { return _data; } }
+    public byte[] Data
+    {
+        get
+        {
+            return _data;
+        }
+    }
 
     public GzipDownloadHandler() : base()
     {
     }
 
-    protected override byte[] GetData() { return _data; }
+    protected override byte[] GetData()
+    {
+        return _data;
+    }
 
     protected override bool ReceiveData(byte[] data, int dataLength)
     {

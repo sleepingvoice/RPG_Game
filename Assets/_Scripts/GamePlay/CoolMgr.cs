@@ -4,16 +4,16 @@ using UnityEngine.Events;
 
 public class CoolMgr : MonoBehaviour
 {
-    private SortedDictionary<float, List<UnityEvent>> dalayDic = new SortedDictionary<float, List<UnityEvent>>();
+    private SortedDictionary<float, List<UnityAction>> dalayDic = new SortedDictionary<float, List<UnityAction>>();
 
-    public void AddCooldown(UnityEvent activeEvent, float delay)
+    public void AddCooldown(UnityAction activeEvent, float delay)
     {
         // 현재 시간에 딜레이를 더하고, 소수 첫째 자리까지 올림
         float triggerTime = Mathf.Ceil((Time.time + delay) * 10) / 10.0f;
 
         if (!dalayDic.ContainsKey(triggerTime)) // 만약 같은 쿨다운이 없다면
         {
-            dalayDic[triggerTime] = new List<UnityEvent>();
+            dalayDic[triggerTime] = new List<UnityAction>();
         }
         dalayDic[triggerTime].Add(activeEvent);
     }
@@ -33,7 +33,7 @@ public class CoolMgr : MonoBehaviour
 
                     if (nextTriggerTime <= currentTime) // 만약 현재시간이 첫번째 키의 시간보다 크다면
                     {
-                        List<UnityEvent> objectsToActivate = firstDic.Value;
+                        List<UnityAction> objectsToActivate = firstDic.Value;
                         foreach (var obj in objectsToActivate)
                         {
                             ActivateObject(obj);
@@ -45,7 +45,7 @@ public class CoolMgr : MonoBehaviour
         }
     }
 
-    void ActivateObject(UnityEvent activeEvent)
+    void ActivateObject(UnityAction activeEvent)
     {
         activeEvent.Invoke();
     }

@@ -19,8 +19,14 @@ namespace PlayFab.PfEditor.Json
         /// </summary>
         public static ISerializer Instance
         {
-            get { return _instance; }
-            set { _instance = value; }
+            get
+            {
+                return _instance;
+            }
+            set
+            {
+                _instance = value;
+            }
         }
 
         public static T DeserializeObject<T>(string json)

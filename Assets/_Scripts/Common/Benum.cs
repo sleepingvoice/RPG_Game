@@ -3,7 +3,7 @@ namespace BaseClass
 {
     public enum GameProgress
     {
-        Title,Login,LoadData,Loding,Game,Option
+        Title, Login, LoadData, Loding, Game, Option
     }
 
     public enum MS_Move
@@ -23,6 +23,7 @@ namespace BaseClass
 
     public enum PS_Attack
     {
-        normal, Attak
+        normal, attack01, attack02
     }
+
 }

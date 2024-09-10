@@ -212,14 +212,14 @@ namespace PlayFab.PfEditor
                 items.Clear();
                 showSave = false;
                 foreach (var kvp in result.Data)
-                items.Add(new KvpItem(kvp.Key, kvp.Value));
+                    items.Add(new KvpItem(kvp.Key, kvp.Value));
 
                 PlayFabEditorPrefsSO.Instance.TitleDataCache.Clear();
                 foreach (var pair in result.Data)
                     PlayFabEditorPrefsSO.Instance.TitleDataCache.Add(pair.Key, pair.Value);
                 PlayFabEditorDataService.SaveEnvDetails();
             };
-           
+
             PlayFabEditorApi.GetTitleData(dataRequest, PlayFabEditorHelper.SharedErrorCallback);
         }
 

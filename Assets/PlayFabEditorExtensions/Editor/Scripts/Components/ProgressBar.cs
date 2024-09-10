@@ -5,7 +5,10 @@ namespace PlayFab.PfEditor
 {
     public class ProgressBar
     {
-        public enum ProgressBarStates { off = 0, on = 1, spin = 2, error = 3, warning = 4, success = 5 }
+        public enum ProgressBarStates
+        {
+            off = 0, on = 1, spin = 2, error = 3, warning = 4, success = 5
+        }
         public static ProgressBarStates currentProgressBarState = ProgressBarStates.off;
 
         public static float progress = 0;

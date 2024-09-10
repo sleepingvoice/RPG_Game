@@ -1,10 +1,10 @@
+using PlayFab.Internal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading;
-using PlayFab.Internal;
 using UnityEngine;
 
 namespace PlayFab.Public
@@ -12,9 +12,18 @@ namespace PlayFab.Public
 #if !UNITY_WSA && !UNITY_WP8 && !NETFX_CORE
     public interface IPlayFabLogger
     {
-        IPAddress ip { get; set; }
-        int port { get; set; }
-        string url { get; set; }
+        IPAddress ip
+        {
+            get; set;
+        }
+        int port
+        {
+            get; set;
+        }
+        string url
+        {
+            get; set;
+        }
 
         // Unity MonoBehaviour callbacks
         void OnEnable();
@@ -38,9 +47,18 @@ namespace PlayFab.Public
         private bool _isApplicationPlaying = true;
         private int _pendingLogsCount;
 
-        public IPAddress ip { get; set; }
-        public int port { get; set; }
-        public string url { get; set; }
+        public IPAddress ip
+        {
+            get; set;
+        }
+        public int port
+        {
+            get; set;
+        }
+        public string url
+        {
+            get; set;
+        }
 
         protected PlayFabLoggerBase()
         {

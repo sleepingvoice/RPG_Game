@@ -3,12 +3,26 @@ using UnityEngine.InputSystem;
 
 public class InputMgr : MonoBehaviour
 {
-    public Vector2 MoveInput { get; private set;}
-    public float RotateInput { get; private set;}
-    public bool JumpInput { get; private set;}
-    public bool AttackInput { get; private set;}
-    public bool RunInput { get; private set;}
-
+    public Vector2 MoveInput
+    {
+        get; private set;
+    }
+    public float RotateInput
+    {
+        get; private set;
+    }
+    public bool JumpInput
+    {
+        get; private set;
+    }
+    public bool AttackInput
+    {
+        get; private set;
+    }
+    public bool RunInput
+    {
+        get; private set;
+    }
 
     private PlayerInput _playerInput;
 

@@ -12,7 +12,10 @@ namespace PlayFab.PfEditor
 
         public static SubMenuComponent menu = null;
 
-        public enum DataMenuStates { TitleData, TitleDataInternal }
+        public enum DataMenuStates
+        {
+            TitleData, TitleDataInternal
+        }
         public static DataMenuStates currentState = DataMenuStates.TitleData;
 
         private static Vector2 scrollPos = Vector2.zero;

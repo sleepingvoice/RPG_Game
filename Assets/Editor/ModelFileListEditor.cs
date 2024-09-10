@@ -1,8 +1,8 @@
-using UnityEditor;
-using System.IO;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using BaseClass;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
+using UnityEditor;
 using UnityEngine;
 
 public class ModelFileListEditor : EditorWindow
@@ -53,7 +53,7 @@ public class ModelFileListEditor : EditorWindow
                 EditorUtility.DisplayDialog("Failure File Path", result, "OK");
                 return;
             }
-            
+
             pathList.PathList = new List<PathInfo>();
             string modelPattern = @"^(.+?)_";
             foreach (string Name in validFileNames)

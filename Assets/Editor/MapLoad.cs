@@ -1,7 +1,7 @@
+using BaseClass;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using BaseClass;
 
 public class MapLoad : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class MapLoad : MonoBehaviour
         EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
 
         SceneNameList SceneNameList = new SceneNameList();
-        
+
         string result;
 
         // 각 씬의 이름을 출력

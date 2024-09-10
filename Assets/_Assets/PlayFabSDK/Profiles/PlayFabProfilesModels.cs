@@ -1,7 +1,7 @@
 #if !DISABLE_PLAYFABENTITY_API
+using PlayFab.SharedModels;
 using System;
 using System.Collections.Generic;
-using PlayFab.SharedModels;
 
 namespace PlayFab.ProfilesModels
 {
@@ -136,7 +136,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The files on this profile.
         /// </summary>
-        public Dictionary<string,EntityProfileFileMetadata> Files;
+        public Dictionary<string, EntityProfileFileMetadata> Files;
         /// <summary>
         /// The language on this profile.
         /// </summary>
@@ -148,7 +148,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The objects on this profile.
         /// </summary>
-        public Dictionary<string,EntityDataObject> Objects;
+        public Dictionary<string, EntityDataObject> Objects;
         /// <summary>
         /// The permissions that govern access to this entity profile and its properties. Only includes permissions set on this
         /// profile, not global statements from titles and namespaces.
@@ -157,7 +157,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The statistics on this profile.
         /// </summary>
-        public Dictionary<string,EntityStatisticValue> Statistics;
+        public Dictionary<string, EntityStatisticValue> Statistics;
         /// <summary>
         /// The version number of the profile in persistent storage at the time of the read. Used for optional optimistic
         /// concurrency during update.
@@ -223,7 +223,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Determines whether the objects will be returned as an escaped JSON string or as a un-escaped JSON object. Default is
         /// JSON string.
@@ -254,7 +254,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Determines whether the objects will be returned as an escaped JSON string or as a un-escaped JSON object. Default is
         /// JSON string.
@@ -285,7 +285,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The optional entity to perform this action on. Defaults to the currently logged in entity.
         /// </summary>
@@ -310,7 +310,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Master player account ids.
         /// </summary>
@@ -331,7 +331,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// Dictionary of master player ids mapped to title player entity keys and id pairs
         /// </summary>
-        public Dictionary<string,EntityKey> TitlePlayerAccounts;
+        public Dictionary<string, EntityKey> TitlePlayerAccounts;
     }
 
     [Serializable]
@@ -341,7 +341,7 @@ namespace PlayFab.ProfilesModels
         /// Dictionary of provider identifiers mapped to title_player_account lineage. Missing lineage indicates the player either
         /// doesn't exist or doesn't play the requested title.
         /// </summary>
-        public Dictionary<string,EntityLineage> TitlePlayerAccounts;
+        public Dictionary<string, EntityLineage> TitlePlayerAccounts;
     }
 
     /// <summary>
@@ -353,7 +353,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// Xbox Sandbox the players had on their Xbox tokens.
         /// </summary>
@@ -386,7 +386,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The entity to perform this action on.
         /// </summary>
@@ -417,7 +417,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The permissions that govern access to all entities under this title or namespace.
         /// </summary>
@@ -439,7 +439,7 @@ namespace PlayFab.ProfilesModels
         /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
-        public Dictionary<string,string> CustomTags;
+        public Dictionary<string, string> CustomTags;
         /// <summary>
         /// The optional entity to perform this action on. Defaults to the currently logged in entity.
         /// </summary>

@@ -1,7 +1,5 @@
-using UnityEngine;
-using System;
-using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
 namespace PlayFab.PfEditor
 {
@@ -38,19 +36,19 @@ namespace PlayFab.PfEditor
             var toolsButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton");
             var packagesButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton");
             if (_menuState == MenuStates.Sdks)
-            sdksButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                sdksButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
             if (_menuState == MenuStates.Settings)
-            settingsButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                settingsButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
             if (_menuState == MenuStates.Logout)
-            logoutButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                logoutButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
             if (_menuState == MenuStates.Data)
-            dataButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                dataButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
             if (_menuState == MenuStates.Help)
-            helpButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                helpButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
             if (_menuState == MenuStates.Packages)
-            packagesButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                packagesButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
             if (_menuState == MenuStates.Tools)
-            toolsButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
+                toolsButtonStyle = PlayFabEditorHelper.uiStyle.GetStyle("textButton_selected");
 
             using (new UnityHorizontal(PlayFabEditorHelper.uiStyle.GetStyle("gpStyleGray1"), GUILayout.Height(25), GUILayout.ExpandWidth(true)))
             {

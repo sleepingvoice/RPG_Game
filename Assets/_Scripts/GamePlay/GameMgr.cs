@@ -1,9 +1,5 @@
-using System.Collections.Generic;
-using UnityEngine;
-using PlayFab;
-using PlayFab.ClientModels;
-using System;
 using BaseClass;
+using UnityEngine;
 
 public class GameMgr : MonoBehaviour
 {
@@ -20,7 +16,7 @@ public class GameMgr : MonoBehaviour
 
     #endregion
 
-    [SerializeField]private GameProgress GameProgressValue = GameProgress.Title;
+    [SerializeField] private GameProgress GameProgressValue = GameProgress.Title;
 
     //¿Ã∫•∆Æ
     public BeventHandler LoginEvent = new BeventHandler();

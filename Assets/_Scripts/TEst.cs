@@ -58,7 +58,7 @@ public class TEst : MonoBehaviour
         TestInfo2.attackSpeed = 2;
         TestInfo2.monsterID = "0002";
         TestInfo2.moveSpeed = 5;
-        CharInfo Testchar2 = new CharInfo();        
+        CharInfo Testchar2 = new CharInfo();
         Testchar2.atk = 5;
         Testchar2.def = 5;
         Testchar2.modelName = "대충경로";
@@ -133,7 +133,8 @@ public class TEst : MonoBehaviour
     public void ClientGetTitleData()
     {
         PlayFabClientAPI.GetTitleData(new GetTitleDataRequest(),
-        result => {
+        result =>
+        {
             if (result.Data == null || !result.Data.ContainsKey("Monster"))
                 Debug.Log("No MonsterName");
             else
@@ -149,8 +150,9 @@ public class TEst : MonoBehaviour
                     ShowLoadData.List.Add(Tmp);
                 }
             }
-            },
-            error => {
+        },
+            error =>
+            {
                 Debug.Log("Got error getting titleData:");
                 Debug.Log(error.GenerateErrorReport());
             }

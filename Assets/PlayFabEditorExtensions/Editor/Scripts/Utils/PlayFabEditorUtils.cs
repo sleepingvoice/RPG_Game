@@ -34,13 +34,19 @@ namespace PlayFab.PfEditor
 
         public static string timeStamp
         {
-            get { return DateTime.Now.ToString(_defaultDateTimeFormats[DEFAULT_LOCAL_OUTPUT_INDEX]); }
+            get
+            {
+                return DateTime.Now.ToString(_defaultDateTimeFormats[DEFAULT_LOCAL_OUTPUT_INDEX]);
+            }
         }
 
 
         public static string utcTimeStamp
         {
-            get { return DateTime.UtcNow.ToString(_defaultDateTimeFormats[DEFAULT_UTC_OUTPUT_INDEX]); }
+            get
+            {
+                return DateTime.UtcNow.ToString(_defaultDateTimeFormats[DEFAULT_UTC_OUTPUT_INDEX]);
+            }
         }
 
         public static string Format(string text, params object[] args)
@@ -113,6 +119,6 @@ namespace PlayFab.PfEditor
                 return base.TrySerializeKnownTypes(input, out output);
             }
         }
-       
+
     }
 }

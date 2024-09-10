@@ -12,7 +12,9 @@ namespace PlayFab.Internal
 {
     public static class PlayFabUtil
     {
-        static PlayFabUtil() { }
+        static PlayFabUtil()
+        {
+        }
 
         private static string _localSettingsFileName = "playfab.local.settings.json";
         public static readonly string[] _defaultDateTimeFormats = new string[]{ // All parseable ISO 8601 formats for DateTime.[Try]ParseExact - Lets us deserialize any legacy timestamps in one of these formats
@@ -43,12 +45,18 @@ namespace PlayFab.Internal
 
         public static string timeStamp
         {
-            get { return DateTime.Now.ToString(_defaultDateTimeFormats[DEFAULT_LOCAL_OUTPUT_INDEX]); }
+            get
+            {
+                return DateTime.Now.ToString(_defaultDateTimeFormats[DEFAULT_LOCAL_OUTPUT_INDEX]);
+            }
         }
 
         public static string utcTimeStamp
         {
-            get { return DateTime.UtcNow.ToString(_defaultDateTimeFormats[DEFAULT_UTC_OUTPUT_INDEX]); }
+            get
+            {
+                return DateTime.UtcNow.ToString(_defaultDateTimeFormats[DEFAULT_UTC_OUTPUT_INDEX]);
+            }
         }
 
         public static string Format(string text, params object[] args)

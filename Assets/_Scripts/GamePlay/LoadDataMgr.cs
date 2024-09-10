@@ -7,7 +7,13 @@ using UnityEngine;
 public class LoadDataMgr : MonoBehaviour
 {
     private Dictionary<string, string> titleData = new Dictionary<string, string>();
-    public Dictionary<string, string> TitleData { get { return titleData; } }
+    public Dictionary<string, string> TitleData
+    {
+        get
+        {
+            return titleData;
+        }
+    }
 
     [SerializeField] private SO_Monster MonsterInfo;
     [SerializeField] private SO_SpawnMap MapSpawnInfo;

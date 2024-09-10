@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,7 +30,7 @@ namespace Manager
                 yield return SceneManager.UnloadSceneAsync(MapName);
             else
                 Debug.Log("플레이중인 씬이 아닙니다.");
-            
+
             yield return null;
         }
     }
