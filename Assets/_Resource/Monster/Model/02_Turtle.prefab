@@ -717,6 +717,8 @@ GameObject:
   - component: {fileID: 7781071573681304619}
   - component: {fileID: 7692090880271736751}
   - component: {fileID: 8435937541285907742}
+  - component: {fileID: 2421710213225660508}
+  - component: {fileID: 8363709529735884120}
   m_Layer: 0
   m_Name: 02_Turtle
   m_TagString: Untagged
@@ -783,6 +785,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.978867, z: 1}
   m_Center: {x: 0, y: 0.4789872, z: 0}
+--- !u!114 &2421710213225660508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777335980381783021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e651e5fc9ff62a4489c1672c9ebe363c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterAnimator: {fileID: 7692090880271736751}
+  aniHandler: {fileID: 8363709529735884120}
+--- !u!114 &8363709529735884120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777335980381783021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc580c9548f793b4b8a5e6059434001d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAnimationStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAnimationComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7777338526461535069
 GameObject:
   m_ObjectHideFlags: 0

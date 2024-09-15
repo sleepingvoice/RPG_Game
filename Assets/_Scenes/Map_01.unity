@@ -4334,7 +4334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2349667f096c94549a768b9502072c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAnimator: {fileID: 739917617}
+  playerAnimator: {fileID: 739917617}
   aniHandler: {fileID: 1731720202}
 --- !u!1 &1017564149
 GameObject:
@@ -5355,8 +5355,6 @@ MonoBehaviour:
     moveSpeed: 0
     firstAttack: 0
   modelObj: {fileID: 0}
-  waitTime: 0
-  targetMap: {fileID: 0}
 --- !u!1 &1345010958
 GameObject:
   m_ObjectHideFlags: 0

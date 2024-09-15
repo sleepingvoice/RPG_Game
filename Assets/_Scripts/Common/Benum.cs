@@ -8,7 +8,7 @@ namespace BaseClass
 
     public enum MS_Move
     {
-        normal, walk, run
+        normal, walk
     }
 
     public enum MS_Attak

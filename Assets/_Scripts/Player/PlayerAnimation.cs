@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField] private Animator PlayerAnimator;
+    [SerializeField] private Animator playerAnimator;
 
     public PlayerAniState NowState
     {
@@ -21,20 +21,20 @@ public class PlayerAnimation : MonoBehaviour
         NowState.moveState = PS_Move.normal;
         NowState.attackState = PS_Attack.normal;
 
-        PlayerAnimator.SetInteger("walkState", 0);
-        PlayerAnimator.SetInteger("attackState", 0);
+        playerAnimator.SetInteger("walkState", 0);
+        playerAnimator.SetInteger("attackState", 0);
     }
 
     public void PlayerWalkState(PS_Move MoveState)
     {
         NowState.moveState = MoveState;
-        PlayerAnimator.SetInteger("walkState", (int)MoveState);
+        playerAnimator.SetInteger("walkState", (int)MoveState);
     }
 
     public void PlayerAttack(PS_Attack AttackState)
     {
         NowState.attackState = AttackState;
-        PlayerAnimator.SetInteger("attackState", (int)AttackState);
+        playerAnimator.SetInteger("attackState", (int)AttackState);
     }
 
 }

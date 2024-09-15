@@ -27,7 +27,7 @@ namespace BaseClass
         public bool firstAttack; // ¼±°ø
     }
 
-    public class MonsterState
+    public class MonsterAniState
     {
         public MS_Move moveState = MS_Move.normal;
         public MS_Attak attackState = MS_Attak.normal;
