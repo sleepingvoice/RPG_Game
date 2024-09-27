@@ -23,6 +23,7 @@ public class PlayerMove : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private bool jumpFlag;
+    private bool jumpInput;
     private bool runFlag;
 
     private CharacterController m_characterController;
@@ -86,6 +87,7 @@ public class PlayerMove : MonoBehaviour
             playAni.PlayerWalkState(PS_Move.normal);
 
         float yVelocity = GetYVelocity();
+
         velocity = new Vector3(InputVelocity.x, yVelocity, InputVelocity.z);
 
         nextFixedPosition += velocity * Time.fixedDeltaTime;
@@ -95,7 +97,7 @@ public class PlayerMove : MonoBehaviour
     {
         horizontalInput = _Input.MoveInput.x;
         verticalInput = _Input.MoveInput.y;
-        jumpFlag = _Input.JumpInput;
+        jumpInput = _Input.JumpInput;
         runFlag = _Input.RunInput;
         if (_Input.RotateInput < 0)
             RotatePlayer(-rotationSpeed);
@@ -123,13 +125,15 @@ public class PlayerMove : MonoBehaviour
             return velocity.y - gravitationalAcceleration * Time.fixedDeltaTime;
         }
 
-        if (jumpFlag) // 점프를 시전했을때
+        if (jumpInput && !jumpFlag) // 점프를 시전했을때
         {
-            jumpFlag = false;
+            Debug.Log("점프" + jumpFlag);
+            jumpFlag = true;
             return velocity.y + jumpForce;
         }
         else
         {
+            jumpFlag = false;
             return Mathf.Max(0.0f, velocity.y);
         };
     }

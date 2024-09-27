@@ -158,6 +158,8 @@ Shader "Polytope Studio/PT_Water_Shader"
 			float3 temp_cast_3 = (WAVESDISPLACEMENT245).xxx;
 			v.vertex.xyz += temp_cast_3;
 			v.vertex.w = 1;
+			v.normal = mul((float3x3)unity_ObjectToWorld, v.normal);
+			v.normal = normalize(v.normal);
 		}
 
 		void surf( Input i , inout SurfaceOutputStandard o )
