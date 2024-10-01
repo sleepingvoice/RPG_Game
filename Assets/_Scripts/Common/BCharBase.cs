@@ -1,7 +1,7 @@
 using BaseClass;
 using UnityEngine;
 
-public class BCharBase : MonoBehaviour
+public class BcharBase : MonoBehaviour
 {
     protected CharInfo baseCharInfo;
 

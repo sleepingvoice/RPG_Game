@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 //몬스터 기본 기능
-public class MonsterBase : BCharBase
+public class MonsterBase : BcharBase
 {
     [Tooltip("고유 ID")]
     [SerializeField] private string spawnID;

@@ -43,33 +43,33 @@ public class GameMgr : MonoBehaviour
 
     private void Start()
     {
-        LoginEvent.CompletedEvent += () => BLog.ProgressLog("Login 이벤트 종료");
+        LoginEvent.CompletedEvent += () => Blog.ProgressLog("Login 이벤트 종료");
         LoginEvent.CompletedEvent += LoadData;
 
-        LoadDataEvent.CompletedEvent += () => BLog.ProgressLog("Login 이벤트 종료");
+        LoadDataEvent.CompletedEvent += () => Blog.ProgressLog("Login 이벤트 종료");
         LoadDataEvent.CompletedEvent += Loading;
 
 
-        LodingEvent.CompletedEvent += () => BLog.ProgressLog("Login 이벤트 종료");
+        LodingEvent.CompletedEvent += () => Blog.ProgressLog("Login 이벤트 종료");
     }
 
     public void Login()
     {
-        BLog.ProgressLog("Login 이벤트 실행");
+        Blog.ProgressLog("Login 이벤트 실행");
         GameProgressValue = GameProgress.Login;
         LoginEvent.InvokeEvent();
     }
 
     public void LoadData()
     {
-        BLog.ProgressLog("LoadData 이벤트 실행");
+        Blog.ProgressLog("LoadData 이벤트 실행");
         GameProgressValue = GameProgress.LoadData;
         LoadDataEvent.InvokeEvent();
     }
 
     public void Loading()
     {
-        BLog.ProgressLog("LodingEvent 이벤트 실행");
+        Blog.ProgressLog("LodingEvent 이벤트 실행");
         GameProgressValue = GameProgress.Loding;
         LodingEvent.InvokeEvent();
     }

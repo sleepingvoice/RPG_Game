@@ -2,7 +2,7 @@ using BaseClass;
 using System;
 using UnityEngine;
 
-public class PlayerBase : BCharBase
+public class PlayerBase : BcharBase
 {
     private GameMgr gameMgr;
 

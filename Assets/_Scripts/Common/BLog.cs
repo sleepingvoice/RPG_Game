@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BLog
+public class Blog
 {
     public static void ProgressLog(string log, string color = "yellow")
     {
